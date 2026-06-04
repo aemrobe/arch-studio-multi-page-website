@@ -1,0 +1,14 @@
+{
+  "name": "arch-studio-multi-page-webstie-resources",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/styles.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.100.0"
+  }
+}

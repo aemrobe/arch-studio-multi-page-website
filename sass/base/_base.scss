@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:not(.link),
+button,
+[role="button"] {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: rem(3) solid $color-very-dark-blue;
+    outline-offset: rem(3);
+  }
+}
+
+ul {
+  list-style-type: none;
+}

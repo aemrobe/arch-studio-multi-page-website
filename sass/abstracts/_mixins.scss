@@ -1,0 +1,7 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-port {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}

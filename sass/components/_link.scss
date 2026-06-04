@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.link {
+  background-color: $color-very-dark-blue;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: $color-white;
+  padding: rem(25) rem(32) rem(22) rem(37);
+  display: inline-flex;
+  gap: rem(24);
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-dark-grey;
+  }
+
+  &:active {
+    background-color: $color-light-grey;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: rem(3) solid $color-light-grey;
+    outline-offset: rem(3);
+  }
+
+  &--featured-desktop,
+  &--featured-desktop {
+    display: none;
+
+    @include respond(tab-port) {
+      display: inline-flex;
+    }
+  }
+
+  &--feature-mobile {
+    display: flex;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}

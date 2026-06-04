@@ -1,0 +1,72 @@
+@use "functions" as *;
+
+// Colors
+$color-very-dark-blue: #1b1d23;
+$color-dark-grey: #60636d;
+$color-medium-grey: #7d828f;
+
+$color-light-grey: #c8ccd8;
+$color-very-light-grey: #eeeff4;
+
+$color-red: #df5656;
+
+$color-white: #fff;
+$color-dark: #000;
+
+// Fonts
+$font-league-spartan: "League Spartan", sans-serif;
+
+// Font size
+$default-font-size: rem(18);
+
+// Line height
+$default-line-height: rem(24);
+
+// Letter-spacing:
+$letter-spacing-none: 0em;
+
+$heading-scale: (
+  "xl": (
+    size: 250,
+    family: $font-league-spartan,
+    weight: bold,
+    height: 0.8,
+    //200px line-height
+    letter: -5,
+  ),
+  "l": (
+    size: rem(48),
+    family: $font-league-spartan,
+    weight: bold,
+    height: rem(48),
+    letter: rem(-1.2),
+    tablet: (
+      size: rem(96),
+      family: $font-league-spartan,
+      weight: bold,
+      height: rem(80),
+      letter: rem(-2),
+    ),
+  ),
+  "m": (
+    size: rem(48),
+    family: $font-league-spartan,
+    weight: bold,
+    height: rem(52),
+    letter: rem(-1.71),
+    tablet: (
+      size: rem(72),
+      family: $font-league-spartan,
+      weight: bold,
+      height: rem(64),
+      letter: rem(-2),
+    ),
+  ),
+  "s": (
+    size: rem(32),
+    family: $font-league-spartan,
+    weight: bold,
+    height: rem(40),
+    letter: 0,
+  ),
+);

@@ -1,0 +1,111 @@
+@use "../abstracts" as *;
+
+.project-card {
+  position: relative;
+  padding: rem(153) rem(24) rem(23);
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  &:not(:last-child) {
+    margin-bottom: rem(24);
+  }
+
+  &__link-wrapper {
+    text-decoration: none;
+    color: $color-white;
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:focus-visible::before {
+      content: "";
+      position: absolute;
+      inset: rem(-3);
+
+      border: rem(3) solid $color-very-dark-blue;
+    }
+  }
+
+  &__text {
+    opacity: 75%;
+  }
+
+  &__number {
+    display: none;
+  }
+
+  &--1 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-seraph.jpg");
+  }
+
+  &--2 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-eebox.jpg");
+  }
+
+  &--3 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-federal.jpg");
+  }
+
+  &--4 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-del-sol.jpg");
+  }
+
+  &--5 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-228b.jpg");
+  }
+
+  &--6 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-prototype.jpg");
+  }
+
+  &--7 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-edelweiss.jpg");
+  }
+
+  &--8 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-netcry.jpg");
+  }
+
+  &--9 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-hypers.jpg");
+  }
+
+  &--10 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-sxiv.jpg");
+  }
+
+  &--11 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-trinity.jpg");
+  }
+
+  &--12 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-paramour.jpg");
+  }
+}

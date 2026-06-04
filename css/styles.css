@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:not(.link):focus,
+button:focus,
+[role=button]:focus {
+  outline: none;
+}
+a:not(.link):focus-visible,
+button:focus-visible,
+[role=button]:focus-visible {
+  outline: 0.1875rem solid #1b1d23;
+  outline-offset: 0.1875rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("../../assets/fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0em;
+}
+
+.heading-xl {
+  font-size: 250;
+  letter-spacing: -5;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  line-height: 0.8;
+}
+
+.heading-l {
+  font-size: 3rem;
+  letter-spacing: -0.075rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  line-height: 3rem;
+}
+@media (min-width: 768px) {
+  .heading-l {
+    font-size: 6rem;
+    letter-spacing: -0.125rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    line-height: 5rem;
+  }
+}
+
+.heading-m {
+  font-size: 3rem;
+  letter-spacing: -0.106875rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  line-height: 3.25rem;
+}
+@media (min-width: 768px) {
+  .heading-m {
+    font-size: 4.5rem;
+    letter-spacing: -0.125rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    line-height: 4rem;
+  }
+}
+
+.heading-s {
+  font-size: 2rem;
+  letter-spacing: 0;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+.hero-slide {
+  padding: 7.25rem 2rem 6.875rem;
+  color: #fff;
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  display: none;
+}
+.hero-slide__title {
+  margin-bottom: 0.6875rem;
+}
+.hero-slide__text {
+  margin-bottom: 5.1875rem;
+}
+.hero-slide--1 {
+  display: block;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/mobile/image-hero-paramour.jpg");
+}
+.hero-slide--2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/mobile/image-hero-seraph.jpg");
+}
+.hero-slide--3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/mobile/image-hero-federal.jpg");
+}
+.hero-slide--4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/mobile/image-hero-trinity.jpg");
+}
+
+.link {
+  background-color: #1b1d23;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 1.5625rem 2rem 1.375rem 2.3125rem;
+  display: inline-flex;
+  gap: 1.5rem;
+  transition: all 0.3s;
+}
+.link:hover {
+  background-color: #60636d;
+}
+.link:active {
+  background-color: #c8ccd8;
+}
+.link:focus {
+  outline: none;
+}
+.link:focus-visible {
+  outline: 0.1875rem solid #c8ccd8;
+  outline-offset: 0.1875rem;
+}
+.link--featured-desktop, .link--featured-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .link--featured-desktop, .link--featured-desktop {
+    display: inline-flex;
+  }
+}
+.link--feature-mobile {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .link--feature-mobile {
+    display: none;
+  }
+}
+
+.project-card {
+  position: relative;
+  padding: 9.5625rem 1.5rem 1.4375rem;
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.project-card:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.project-card__link-wrapper {
+  text-decoration: none;
+  color: #fff;
+}
+.project-card__link-wrapper:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.project-card__link-wrapper:focus-visible::before {
+  content: "";
+  position: absolute;
+  inset: -0.1875rem;
+  border: 0.1875rem solid #1b1d23;
+}
+.project-card__text {
+  opacity: 75%;
+}
+.project-card__number {
+  display: none;
+}
+.project-card--1 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-seraph.jpg");
+}
+.project-card--2 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-eebox.jpg");
+}
+.project-card--3 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-federal.jpg");
+}
+.project-card--4 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-del-sol.jpg");
+}
+.project-card--5 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-228b.jpg");
+}
+.project-card--6 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-prototype.jpg");
+}
+.project-card--7 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-edelweiss.jpg");
+}
+.project-card--8 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-netcry.jpg");
+}
+.project-card--9 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-hypers.jpg");
+}
+.project-card--10 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-sxiv.jpg");
+}
+.project-card--11 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-trinity.jpg");
+}
+.project-card--12 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-paramour.jpg");
+}
+
+.header {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu-toggle {
+  display: flex;
+  border: none;
+}
+.header__logo-link {
+  width: 4.8125rem;
+}
+.header__slide {
+  padding: 7.25rem 2rem 0;
+}
+
+.navigation {
+  display: none;
+}
+
+.footer {
+  position: relative;
+  background-color: #eeeff4;
+  padding-top: 5.8125rem;
+  padding: 5.8125rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__logo-container {
+  display: inline-block;
+  padding: 3.0625rem 1.875rem 2.929375rem 2rem;
+  background-color: #1b1d23;
+  color: #fff;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__list-item {
+  text-align: center;
+}
+.footer__list-item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.footer__list-item:last-child {
+  margin-bottom: 1.9375rem;
+}
+.footer__link {
+  display: inline-block;
+  color: #7d828f;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hero__list {
+  list-style-type: none;
+}
+
+.welcome {
+  padding: 4.5rem 2rem 7.0625rem;
+}
+.welcome::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 4.0625rem;
+  background-color: #c8ccd8;
+}
+.welcome__title {
+  padding-top: 4.3125rem;
+  margin-bottom: 1.375rem;
+}
+.welcome__text {
+  color: #60636d;
+}
+.welcome__text:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+
+.about {
+  padding: 11.3125rem 2rem 11.25rem;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/home/mobile/image-small-team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.about__title {
+  margin-bottom: 1.4375rem;
+}
+
+.featured {
+  padding: 4.5625rem 2rem 10.6875rem;
+}
+.featured__title {
+  margin-bottom: 2.6875rem;
+}
+
+.portfolio-main {
+  margin-top: 3.498125rem;
+  padding: 0 2rem 8.25rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

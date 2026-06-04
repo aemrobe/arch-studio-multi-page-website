@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.hero-slide {
+  padding: rem(116) rem(32) rem(110);
+  color: $color-white;
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  display: none;
+
+  &__title {
+    margin-bottom: rem(11);
+  }
+
+  &__text {
+    margin-bottom: rem(83);
+  }
+
+  &--1 {
+    display: block;
+    background-image:
+      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
+      url("../../assets/home/mobile/image-hero-paramour.jpg");
+  }
+
+  &--2 {
+    background-image:
+      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
+      url("../../assets/home/mobile/image-hero-seraph.jpg");
+  }
+
+  &--3 {
+    background-image:
+      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
+      url("../../assets/home/mobile/image-hero-federal.jpg");
+  }
+
+  &--4 {
+    background-image:
+      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
+      url("../../assets/home/mobile/image-hero-trinity.jpg");
+  }
+}

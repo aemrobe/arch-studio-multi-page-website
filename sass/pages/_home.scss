@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+
+.hero {
+  &__list {
+    list-style-type: none;
+  }
+}
+
+.welcome {
+  padding: rem(72) rem(32) rem(113);
+
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: rem(65);
+    background-color: $color-light-grey;
+  }
+
+  &__title {
+    padding-top: rem(69);
+    margin-bottom: rem(22);
+  }
+
+  &__text {
+    color: $color-dark-grey;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: rem(25);
+  }
+}
+
+.about {
+  padding: rem(181) rem(32) rem(180);
+  color: $color-white;
+  background-image:
+    linear-gradient(rgba($color-dark, 0.6), rgba($color-dark, 0.6)),
+    url("../../assets/home/mobile/image-small-team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  &__title {
+    margin-bottom: rem(23);
+  }
+}
+
+.featured {
+  padding: rem(73) rem(32) rem(171);
+
+  &__title {
+    margin-bottom: rem(43);
+  }
+}

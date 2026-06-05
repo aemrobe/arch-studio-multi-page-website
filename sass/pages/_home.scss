@@ -10,11 +10,7 @@
   padding: rem(72) rem(32) rem(113);
 
   &::before {
-    content: "";
-    display: block;
-    height: 1px;
-    width: rem(65);
-    background-color: $color-light-grey;
+    @include horizontal-line;
   }
 
   &__title {
@@ -27,7 +23,7 @@
   }
 
   &__text:not(:last-child) {
-    margin-bottom: rem(25);
+    margin-bottom: $paragraph-spacing;
   }
 }
 

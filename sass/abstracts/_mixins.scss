@@ -1,7 +1,40 @@
+@use "./functions" as *;
+@use "./variables" as *;
+
 @mixin respond($breakpoint) {
   @if $breakpoint == tab-port {
     @media (min-width: 768px) {
       @content;
     }
   }
+}
+
+@mixin geometric-hero-shape($image-path) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  height: rem(240);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
+    url($image-path);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    calc(100% - 32px) 100%,
+    calc(100% - 32px) calc(100% - 45px),
+    0% calc(100% - 45px)
+  );
+}
+
+@mixin horizontal-line {
+  content: "";
+  display: block;
+  height: 1px;
+  width: rem(65);
+  background-color: $color-light-grey;
 }

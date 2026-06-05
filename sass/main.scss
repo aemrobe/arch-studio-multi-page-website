@@ -1,5 +1,6 @@
 @use "base/base";
 @use "base/typography";
+@use "base/utilities";
 
 @use "components/hero-slide";
 @use "components/link";
@@ -11,3 +12,4 @@
 
 @use "pages/home";
 @use "pages/portfolio";
+@use "pages/about";

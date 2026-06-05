@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../abstracts" as *;
 
 @font-face {
@@ -10,6 +11,7 @@
 
 body {
   font-family: $font-league-spartan;
+  font-weight: 500;
   font-size: $default-font-size;
   line-height: $default-line-height;
   letter-spacing: $letter-spacing-none;
@@ -17,21 +19,21 @@ body {
 
 @each $size, $properties in $heading-scale {
   .heading-#{$size} {
-    font-size: map-get($properties, size);
-    letter-spacing: map-get($properties, letter);
-    font-family: map-get($properties, family);
-    font-weight: map-get($properties, weight);
-    line-height: map-get($properties, height);
+    font-size: map.get($properties, size);
+    letter-spacing: map.get($properties, letter);
+    font-family: map.get($properties, family);
+    font-weight: map.get($properties, weight);
+    line-height: map.get($properties, height);
 
     @if $size == "m" or $size == "l" {
       @include respond(tab-port) {
-        $big-screen-size-props: map-get($properties, tablet);
+        $big-screen-size-props: map.get($properties, tablet);
 
-        font-size: map-get($big-screen-size-props, size);
-        letter-spacing: map-get($big-screen-size-props, letter);
-        font-family: map-get($big-screen-size-props, family);
-        font-weight: map-get($big-screen-size-props, weight);
-        line-height: map-get($big-screen-size-props, height);
+        font-size: map.get($big-screen-size-props, size);
+        letter-spacing: map.get($big-screen-size-props, letter);
+        font-family: map.get($big-screen-size-props, family);
+        font-weight: map.get($big-screen-size-props, weight);
+        line-height: map.get($big-screen-size-props, height);
       }
     }
   }

@@ -30,6 +30,7 @@ ul {
 }
 body {
   font-family: "League Spartan", sans-serif;
+  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.5rem;
   letter-spacing: 0em;
@@ -83,6 +84,26 @@ body {
   font-family: "League Spartan", sans-serif;
   font-weight: bold;
   line-height: 2.5rem;
+}
+
+.margin-top-small {
+  margin-top: 1.5rem;
+}
+
+.letter-spacing-small {
+  letter-spacing: -0.075rem !important;
+}
+
+.sr-only {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip-path: inset(50%);
+  white-space: no-wrap;
+  padding: 0;
+  margin: -1px;
+  border: 0;
 }
 
 .hero-slide {
@@ -327,6 +348,92 @@ body {
 .portfolio-main {
   margin-top: 3.498125rem;
   padding: 0 2rem 8.25rem;
+}
+
+.about-main {
+  padding: 0rem 2rem;
+  position: relative;
+}
+.about-main h2,
+.about-main h3 {
+  color: #1b1d23;
+}
+.about-main p {
+  color: #60636d;
+}
+.about-main section {
+  max-width: 40.0625rem;
+}
+
+.team-intro {
+  padding: 16.3125rem 0 4.75rem;
+}
+.team-intro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  height: 15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/about/mobile/image-hero.jpg");
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, calc(100% - 32px) 100%, calc(100% - 32px) calc(100% - 45px), 0% calc(100% - 45px));
+}
+.team-intro__title {
+  max-width: 19.4375rem;
+}
+.team-intro__text {
+  margin: 1.25rem 0 0;
+}
+.team-intro ~ section h2 {
+  max-width: 7ch;
+}
+
+.heritage {
+  padding-bottom: 7rem;
+}
+.heritage::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 4.0625rem;
+  background-color: #c8ccd8;
+}
+.heritage__title {
+  margin-top: 4.3125rem;
+}
+.heritage__text {
+  margin-top: 1.375rem;
+}
+.heritage__text:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+
+.leaders {
+  padding-bottom: 10.6875rem;
+}
+.leaders__list-item {
+  max-width: 21.875rem;
+}
+.leaders__list-item:not(:last-child) {
+  margin-bottom: 4.9375rem;
+}
+.leaders__title {
+  margin-bottom: 3.4375rem;
+}
+.leaders__image-container {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.9375rem;
+}
+.leaders__img {
+  display: block;
+  width: 100%;
+}
+.leaders .leaders__text {
+  color: #1b1d23;
+  opacity: 75%;
 }
 
 /*# sourceMappingURL=styles.css.map */

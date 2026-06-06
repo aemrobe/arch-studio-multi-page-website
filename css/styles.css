@@ -138,11 +138,14 @@ body {
   background-color: #1b1d23;
   text-decoration: none;
   text-transform: capitalize;
+  line-height: 1.5625rem;
   color: #fff;
   padding: 1.5625rem 2rem 1.375rem 2.3125rem;
   display: inline-flex;
   gap: 1.5rem;
   transition: all 0.3s;
+  outline: 0.1875rem solid transparent;
+  outline-offset: 0.1875rem;
 }
 .link:hover {
   background-color: #60636d;
@@ -157,11 +160,11 @@ body {
   outline: 0.1875rem solid #c8ccd8;
   outline-offset: 0.1875rem;
 }
-.link--featured-desktop, .link--featured-desktop {
+.link--feature-desktop {
   display: none;
 }
 @media (min-width: 768px) {
-  .link--featured-desktop, .link--featured-desktop {
+  .link--feature-desktop {
     display: inline-flex;
   }
 }
@@ -173,6 +176,21 @@ body {
   .link--feature-mobile {
     display: none;
   }
+}
+.link--feature-white {
+  padding: 0;
+  background-color: transparent;
+  color: #1b1d23;
+}
+.link--feature-white:hover {
+  background-color: transparent;
+}
+.link--feature-white:active {
+  background-color: transparent;
+}
+.link--feature-white:focus-visible {
+  outline: 0.1875rem solid #1b1d23;
+  outline-offset: 0.1875rem;
 }
 
 .project-card {
@@ -240,6 +258,41 @@ body {
 }
 .project-card--12 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-paramour.jpg");
+}
+
+.submit-btn {
+  border: none;
+  z-index: 100;
+  display: block;
+  background-color: #1b1d23;
+  color: #fff;
+  padding: 1.9375rem 1.75rem;
+  transition: all 0.3s;
+  outline: 0.1875rem solid transparent;
+  outline-offset: 0.1875rem;
+}
+.submit-btn--right {
+  margin-left: auto;
+}
+.submit-btn:focus {
+  outline: none;
+}
+.submit-btn:focus-visible {
+  outline: 0.1875rem solid #c8ccd8;
+  outline-offset: 0.1875rem;
+}
+.submit-btn:hover {
+  background-color: #60636d;
+}
+.submit-btn:active {
+  background-color: #c8ccd8;
+}
+
+.error-text {
+  color: #df5656;
+  font-weight: bold;
+  letter-spacing: -0.0175rem;
+  position: absolute;
 }
 
 .header {
@@ -351,7 +404,7 @@ body {
 }
 
 .about-main {
-  padding: 0rem 2rem;
+  padding: 0 2rem;
   position: relative;
 }
 .about-main h2,
@@ -434,6 +487,131 @@ body {
 .leaders .leaders__text {
   color: #1b1d23;
   opacity: 75%;
+}
+
+.contact-main {
+  position: relative;
+}
+.contact-main p:not(.error-text) {
+  color: #60636d;
+}
+.contact-main h2 {
+  color: #1b1d23;
+}
+
+.tell-us {
+  padding: 16.25rem 2rem 6.25rem;
+}
+.tell-us__title {
+  margin-bottom: 1.3125rem;
+  max-width: 11ch;
+}
+.tell-us__text {
+  max-width: 37rem;
+}
+.tell-us::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  height: 15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/contact/mobile/image-hero.jpg");
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, calc(100% - 32px) 100%, calc(100% - 32px) calc(100% - 45px), 0% calc(100% - 45px));
+}
+.tell-us ~ section h2 {
+  max-width: 7ch;
+}
+
+.contact-details {
+  padding-bottom: 4.5625rem;
+}
+.contact-details__title {
+  padding: 0 2rem;
+  margin-bottom: 2.5rem;
+}
+.contact-details__list-item:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.contact-details__list-title {
+  color: #60636d;
+  font-size: inherit;
+  line-height: 2.1875rem;
+  margin-bottom: 0.875rem;
+}
+.contact-details__list {
+  padding: 0 2rem;
+  margin-bottom: 4.4375rem;
+}
+.contact-details__list-text:last-of-type {
+  margin-bottom: 2.6875rem;
+}
+.contact-details__img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 23.4375rem;
+}
+
+.connect-with-us {
+  padding: 0 2rem 8.25rem;
+}
+.connect-with-us__title {
+  margin-bottom: 2rem;
+}
+.connect-with-us__form {
+  display: flex;
+  flex-direction: column;
+}
+.connect-with-us__input-container {
+  position: relative;
+}
+.connect-with-us__input-container:not(:last-of-type) {
+  margin-bottom: 2.0625rem;
+}
+.connect-with-us .error-text {
+  bottom: 1rem;
+  right: 1rem;
+  display: none;
+}
+.connect-with-us__input {
+  border: none;
+  display: block;
+  font-family: inherit;
+  font-weight: bold;
+  border-bottom: 0.0625rem solid #1b1d23;
+  width: 100%;
+  padding: 0.625rem 0 1.3125rem 2.155625rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.019375rem;
+  font-weight: bold;
+  color: #1b1d23;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.connect-with-us__input:focus {
+  box-shadow: 0 0.125rem 0 0 #1b1d23;
+}
+.connect-with-us__input.error {
+  border-bottom-color: #df5656;
+  color: #df5656;
+}
+.connect-with-us__input.error + .error-text {
+  display: block;
+}
+.connect-with-us__input.error:focus {
+  box-shadow: 0 0.125rem 0 0 #df5656;
+}
+.connect-with-us__input.error::placeholder {
+  color: rgba(223, 86, 86, 0.5);
+}
+.connect-with-us__input--message {
+  padding-bottom: 3.125rem;
+}
+.connect-with-us__input::placeholder {
+  color: #c8ccd8;
 }
 
 /*# sourceMappingURL=styles.css.map */

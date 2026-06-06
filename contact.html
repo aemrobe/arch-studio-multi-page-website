@@ -1,57 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Arch Studio Website Challenge</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Contact
+    <link rel="stylesheet" href="css/styles.css" />
 
-  Portfolio
-  About Us
-  Contact
+    <title>Frontend Mentor | Arch Studio Website Challenge</title>
+  </head>
+  <body>
+    <header class="header">
+      <a
+        href="index.html"
+        class="header__logo-link"
+        aria-label="Arch Studio Home"
+      >
+        <img
+          src="./assets/logo.svg"
+          alt="Arch Studio Logo"
+          class="header__logo"
+        />
+      </a>
 
-  Contact
+      <button
+        class="header__menu-toggle"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Open navigation menu"
+      >
+        <img
+          src="./assets/icons/icon-hamburger.svg"
+          aria-hidden="true"
+          alt=""
+        />
+      </button>
 
-  Tell us about your project
+      <nav class="navigation" id="main-nav">
+        <ul class="navigation__list">
+          <li class="navigation__list-item">
+            <a href="portfolio.html" class="navigation__link">Portfolio</a>
+          </li>
 
-  We’d love to hear more about your project. Please, leave a message below or give 
-  us a call. We have two offices, one in Texas and one in Tennessee. If you find 
-  yourself nearby, come say hello!
+          <li class="navigation__list-item">
+            <a href="about.html" class="navigation__link">About us</a>
+          </li>
 
-  Contact Details
+          <li class="navigation__list-item">
+            <a href="contact.html" class="navigation__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  Main Office
-  Mail:	archone@mail.com
-  Address: 1892 Chenoweth Drive TN
-  Phone: 123-456-3451
+    <main class="contact-main">
+      <h1 class="sr-only">contact us</h1>
 
-  View on Map
+      <section class="tell-us" aria-labelledby="tell-us-heading">
+        <h2
+          id="tell-us-heading"
+          class="tell-us__title heading-m letter-spacing-small"
+        >
+          Tell us about your project
+        </h2>
 
-  Office II
-  Mail: archtwo@mail.com
-  Address: 3399 Wines Lane TX
-  Phone: 832-123-4321
+        <p class="tell-us__text">
+          We’d love to hear more about your project. Please, leave a message
+          below or give us a call. We have two offices, one in Texas and one in
+          Tennessee. If you find yourself nearby, come say hello!
+        </p>
+      </section>
 
-  View on Map
+      <section
+        class="contact-details"
+        aria-labelledby="contact-details-heading"
+      >
+        <h2
+          id="contact-details-heading"
+          class="contact-details__title heading-m"
+        >
+          Contact Details
+        </h2>
 
-  Connect with us
+        <ul class="contact-details__list">
+          <li class="contact-details__list-item">
+            <h3 class="contact-details__list-title">Main Office</h3>
+            <p class="contact-details__list-text">Mail: archone@mail.com</p>
+            <p class="contact-details__list-text">
+              Address: 1892 Chenoweth Drive TN
+            </p>
+            <p class="contact-details__list-text">Phone: 123-456-3451</p>
 
-  Name
-  Email
-  Message
+            <a href="portfolio.html" class="link link--feature-white"
+              ><span> View on Map</span>
 
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="20"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 1l9 9-9 9M0 10h24" />
+                </g></svg
+            ></a>
+          </li>
 
-  Portfolio
-  About Us
-  Contact
+          <li class="contact-details__list-item">
+            <h3 class="contact-details__list-title">Office II</h3>
+            <p class="contact-details__list-text">Mail: archtwo@mail.com</p>
+            <p class="contact-details__list-text">
+              Address: 3399 Wines Lane TX
+            </p>
+            <p class="contact-details__list-text">Phone: 832-123-4321</p>
 
-  See Our Portfolio
+            <a href="portfolio.html" class="link link--feature-white"
+              ><span>View on Map</span>
 
-</body>
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="20"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M15 1l9 9-9 9M0 10h24" />
+                </g></svg
+            ></a>
+          </li>
+        </ul>
+
+        <img
+          class="contact-details__img"
+          src="./assets//contact//mobile/image-map.png"
+          alt="locations on a map"
+        />
+      </section>
+
+      <section
+        class="connect-with-us"
+        aria-labelledby="connect-with-us-heading"
+      >
+        <h2
+          id="connect-with-us-heading"
+          class="connect-with-us__title heading-m"
+        >
+          Connect with us
+        </h2>
+
+        <form action="#" class="connect-with-us__form">
+          <div class="connect-with-us__input-container">
+            <input
+              class="connect-with-us__input"
+              type="text"
+              name="Name"
+              aria-label="Name"
+              placeholder="Name"
+            />
+
+            <p class="error-text">Can't be empty</p>
+          </div>
+
+          <div class="connect-with-us__input-container">
+            <input
+              class="connect-with-us__input"
+              type="email"
+              name="Email"
+              aria-label="Email"
+              placeholder="Email"
+            />
+
+            <p class="error-text">Can't be empty</p>
+          </div>
+
+          <div class="connect-with-us__input-container">
+            <textarea
+              class="connect-with-us__input connect-with-us__input--message"
+              aria-label="Message"
+              name="Message"
+              placeholder="Message"
+            ></textarea>
+
+            <p class="error-text">Can't be empty</p>
+          </div>
+
+          <button type="button" class="submit-btn submit-btn--right">
+            <span class="sr-only">submit</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18">
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M15 1l9 9-9 9M0 10h24" />
+              </g>
+            </svg>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__logo-container">
+        <svg width="58" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 40">
+          <path
+            fill="currentColor"
+            d="M10.822 39.27l2.26-6.256h13.836l2.26 6.255H40L24.658 1.6h-9.316L0 39.268h10.822zM23.493 24.2h-6.986L20 15.252l3.493 8.95zm21.804 15.07V27.807c0-.776.22-1.499.662-2.169a5.14 5.14 0 011.746-1.632A4.51 4.51 0 0150 23.379c.64 0 1.343.13 2.112.388.769.259 1.434.601 1.998 1.028l3.972-7.991c-.654-.487-1.484-.883-2.488-1.188-1.005-.304-1.956-.456-2.854-.456-1.385 0-2.729.354-4.03 1.061-1.301.708-2.44 1.694-3.413 2.957V15.89h-9.498v23.38h9.498zm18.995.73c1.507 0 2.942-.21 4.304-.628 1.362-.418 2.439-.91 3.23-1.472l-3.105-6.393c-.289.198-.688.377-1.198.536-.51.16-1.07.24-1.678.24-.99 0-1.85-.217-2.58-.65a4.449 4.449 0 01-1.678-1.724 4.806 4.806 0 01-.582-2.33c0-.669.163-1.369.49-2.1.328-.73.845-1.347 1.553-1.849s1.625-.753 2.751-.753c1.187 0 2.161.258 2.922.776l3.105-6.393c-.76-.578-1.841-1.073-3.242-1.484a15.324 15.324 0 00-4.337-.616c-1.903 0-3.665.346-5.286 1.039-1.62.692-3.029 1.628-4.224 2.808a13.053 13.053 0 00-2.785 3.995 11.177 11.177 0 00-.993 4.6c0 1.69.354 3.285 1.062 4.784.707 1.5 1.678 2.82 2.91 3.961a13.79 13.79 0 004.258 2.683c1.606.647 3.307.97 5.103.97zm14.703-.73V26.392c0-.792.16-1.477.48-2.055a3.374 3.374 0 011.347-1.347c.578-.32 1.248-.48 2.01-.48 1.156 0 2.084.354 2.784 1.062.7.708 1.05 1.648 1.05 2.82v12.876h9.498V24.338c0-1.75-.41-3.314-1.232-4.692a9.088 9.088 0 00-3.345-3.276c-1.408-.807-3.003-1.21-4.783-1.21-1.4 0-2.782.255-4.144.765a12.064 12.064 0 00-3.665 2.157V0h-9.497v39.27h9.497z"
+          />
+        </svg>
+      </span>
+
+      <nav class="footer__navigation">
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a href="portfolio.html" class="footer__link"> Portfolio</a>
+          </li>
+
+          <li class="footer__list-item">
+            <a href="about.html" class="footer__link"> About Us</a>
+          </li>
+
+          <li class="footer__list-item">
+            <a href="contact.html" class="footer__link"> Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="portfolio.html" class="link"
+        ><span> See Our Portfolio</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
+          <g
+            fill="none"
+            fill-rule="evenodd"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 1l9 9-9 9M0 10h24" />
+          </g></svg
+      ></a>
+    </footer>
+  </body>
 </html>

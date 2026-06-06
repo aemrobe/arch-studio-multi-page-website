@@ -1,0 +1,8 @@
+@use "../abstracts" as *;
+
+.error-text {
+  color: $color-red;
+  font-weight: bold;
+  letter-spacing: rem(-0.28);
+  position: absolute;
+}

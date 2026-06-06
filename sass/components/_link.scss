@@ -4,11 +4,14 @@
   background-color: $color-very-dark-blue;
   text-decoration: none;
   text-transform: capitalize;
+  line-height: rem(25);
   color: $color-white;
   padding: rem(25) rem(32) rem(22) rem(37);
   display: inline-flex;
   gap: rem(24);
   transition: all 0.3s;
+  outline: rem(3) solid transparent;
+  outline-offset: rem(3);
 
   &:hover {
     background-color: $color-dark-grey;
@@ -27,8 +30,7 @@
     outline-offset: rem(3);
   }
 
-  &--featured-desktop,
-  &--featured-desktop {
+  &--feature-desktop {
     display: none;
 
     @include respond(tab-port) {
@@ -42,6 +44,25 @@
 
     @include respond(tab-port) {
       display: none;
+    }
+  }
+
+  &--feature-white {
+    padding: 0;
+    background-color: transparent;
+    color: $color-very-dark-blue;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &:focus-visible {
+      outline: rem(3) solid $color-very-dark-blue;
+      outline-offset: rem(3);
     }
   }
 }

@@ -5,6 +5,8 @@
 @use "components/hero-slide";
 @use "components/link";
 @use "components/project-card";
+@use "components/submit-btn";
+@use "components/form_error";
 
 @use "layout/header";
 @use "layout/navigation";
@@ -13,3 +15,4 @@
 @use "pages/home";
 @use "pages/portfolio";
 @use "pages/about";
+@use "pages/contact";

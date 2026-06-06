@@ -1,0 +1,143 @@
+@use "../abstracts" as *;
+
+.contact-main {
+  position: relative;
+
+  p:not(.error-text) {
+    color: $color-dark-grey;
+  }
+
+  h2 {
+    color: $color-very-dark-blue;
+  }
+}
+
+.tell-us {
+  padding: rem(260) rem(32) rem(100);
+
+  &__title {
+    margin-bottom: rem(21);
+    max-width: 11ch;
+  }
+
+  &__text {
+    max-width: rem(592);
+  }
+
+  &::before {
+    @include geometric-hero-shape("../../assets/contact/mobile/image-hero.jpg");
+  }
+
+  & ~ section h2 {
+    max-width: 7ch;
+  }
+}
+
+.contact-details {
+  padding-bottom: rem(73);
+
+  &__title {
+    padding: 0 rem(32);
+    margin-bottom: rem(40);
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+
+  &__list-title {
+    color: $color-dark-grey;
+    font-size: inherit;
+    line-height: rem(35);
+    margin-bottom: rem(14);
+  }
+
+  &__list {
+    padding: 0 rem(32);
+    margin-bottom: rem(71);
+  }
+
+  &__list-text {
+    &:last-of-type {
+      margin-bottom: rem(43);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: rem(375);
+  }
+}
+
+.connect-with-us {
+  padding: 0 rem(32) rem(132);
+
+  &__title {
+    margin-bottom: rem(32);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-container {
+    position: relative;
+    &:not(:last-of-type) {
+      margin-bottom: rem(33);
+    }
+  }
+
+  .error-text {
+    bottom: rem(16);
+    right: rem(16);
+    display: none;
+  }
+
+  &__input {
+    border: none;
+    display: block;
+    font-family: inherit;
+    font-weight: bold;
+    border-bottom: rem(1) solid $color-very-dark-blue;
+    width: 100%;
+    padding: rem(10) 0 rem(21) rem(34.49);
+    font-size: rem(20);
+    letter-spacing: rem(-0.31);
+    font-weight: bold;
+    color: $color-very-dark-blue;
+    outline: none;
+    transition: box-shadow 0.2s;
+
+    &:focus {
+      box-shadow: 0 rem(2) 0 0 $color-very-dark-blue;
+    }
+
+    &.error {
+      border-bottom-color: $color-red;
+      color: $color-red;
+
+      & + .error-text {
+        display: block;
+      }
+
+      &:focus {
+        box-shadow: 0 rem(2) 0 0 $color-red;
+      }
+
+      &::placeholder {
+        color: rgba($color-red, 0.5);
+      }
+    }
+
+    &--message {
+      padding-bottom: rem(50);
+    }
+
+    &::placeholder {
+      color: $color-light-grey;
+    }
+  }
+}

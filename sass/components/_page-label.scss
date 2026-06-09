@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.page-label-container {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+    position: static;
+    width: 0;
+    height: 0;
+  }
+}
+
+.page-label {
+  height: auto;
+  width: auto;
+  overflow: visible;
+  clip-path: unset;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transform: translateX(rem(-35)) rotate(90deg);
+  transform-origin: left top;
+  font-size: rem(18);
+  line-height: rem(24);
+  letter-spacing: rem(18);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-light-grey;
+  display: flex;
+  align-items: center;
+  height: rem(50);
+
+  &::before {
+    content: "";
+    display: block;
+    width: rem(104);
+    height: rem(1);
+    background-color: $color-light-grey;
+    margin-right: rem(56);
+  }
+}

@@ -11,6 +11,13 @@
   display: flex;
   flex-direction: column;
 
+  @include respond(tab-port) {
+    flex-direction: row;
+    align-items: center;
+    min-height: unset;
+    background-color: $color-white;
+  }
+
   &__wrapper {
     pointer-events: all;
     background-color: $color-white;
@@ -18,18 +25,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond(tab-port) {
+      padding: rem(56) 0 rem(56) rem(97);
+      background-color: transparent;
+      justify-content: flex-start;
+    }
   }
 
   &__menu-toggle {
     display: flex;
     border: none;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__logo-link {
     width: rem(77);
-  }
 
-  &__slide {
-    padding: rem(116) rem(32) 0;
+    @include respond(tab-port) {
+      width: rem(96);
+      margin-right: rem(78.87);
+    }
   }
 }

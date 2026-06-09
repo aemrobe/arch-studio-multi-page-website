@@ -9,7 +9,13 @@
 }
 
 body {
+  margin: 0 auto;
   padding-top: rem(103);
+  background-color: $color-white;
+
+  @include respond(tab-port) {
+    padding-top: rem(160);
+  }
 }
 
 a:not(.link),
@@ -27,4 +33,12 @@ button,
 
 ul {
   list-style-type: none;
+}
+
+main {
+  position: relative;
+
+  @include respond(tab-port) {
+    padding: 0 rem(98) 0 rem(97);
+  }
 }

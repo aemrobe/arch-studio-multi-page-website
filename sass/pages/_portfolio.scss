@@ -3,4 +3,8 @@
 .portfolio-main {
   margin-top: rem(55.97);
   padding: 0 rem(32) rem(132);
+
+  @include respond(tab-port) {
+    padding: 0 rem(98) 0 rem(97);
+  }
 }

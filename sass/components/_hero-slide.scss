@@ -8,13 +8,27 @@
   background-repeat: no-repeat;
   display: none;
 
+  @include respond(tab-port) {
+    padding: rem(186) rem(58) rem(179) rem(58);
+  }
+
   &__title {
     margin-bottom: rem(11);
+
+    @include respond(tab-port) {
+      max-width: rem(457);
+      margin-bottom: rem(10);
+    }
   }
 
   &__text {
     margin-bottom: rem(83);
     max-width: rem(470);
+
+    @include respond(tab-port) {
+      max-width: rem(457);
+      margin-bottom: rem(33);
+    }
   }
 
   &--1 {
@@ -22,6 +36,12 @@
     background-image:
       linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
       url("../../assets/home/mobile/image-hero-paramour.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
+        url("../../assets/home/tablet/image-hero-paramour.jpg");
+    }
   }
 
   &--2 {

@@ -1,7 +1,9 @@
 @use "../abstracts" as *;
 
 .contact-main {
-  position: relative;
+  @include respond(tab-port) {
+    padding: 0 rem(98) 0 rem(97);
+  }
 
   p:not(.error-text) {
     color: $color-dark-grey;

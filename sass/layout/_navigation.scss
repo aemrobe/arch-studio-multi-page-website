@@ -12,6 +12,14 @@
   &.open {
     display: flex;
   }
+
+  @include respond(tab-port) {
+    display: flex;
+    background-color: transparent;
+    flex-grow: 0;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .navigation {
@@ -24,6 +32,20 @@
     &:not(:last-child) {
       margin-bottom: rem(17);
     }
+
+    @include respond(tab-port) {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-left: rem(51);
+      }
+
+      &:nth-last-child(2) {
+        margin-left: rem(61);
+      }
+    }
   }
 
   &__link {
@@ -31,5 +53,23 @@
     pointer-events: all;
     text-decoration: none;
     color: $color-very-dark-blue;
+
+    @include respond(tab-port) {
+      font-size: rem(18);
+      line-height: rem(25);
+      color: $color-medium-grey;
+    }
+  }
+
+  &__list {
+    @include respond(tab-port) {
+      display: flex;
+    }
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
   }
 }

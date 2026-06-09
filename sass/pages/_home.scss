@@ -1,5 +1,11 @@
 @use "../abstracts" as *;
 
+.home-main {
+  @include respond(tab-port) {
+    padding: 0 rem(98) 0 rem(97);
+  }
+}
+
 .hero {
   &__list {
     list-style-type: none;

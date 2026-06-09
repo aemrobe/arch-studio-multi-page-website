@@ -2,7 +2,10 @@
 
 .about-main {
   padding: 0 rem(32);
-  position: relative;
+
+  @include respond(tab-port) {
+    padding: 0 rem(98) 0 rem(97);
+  }
 
   h2,
   h3 {

@@ -63,6 +63,8 @@
 
   &__list-item {
     max-width: rem(350);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__list-item:not(:last-child) {

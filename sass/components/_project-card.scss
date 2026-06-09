@@ -2,6 +2,8 @@
 
 .project-card {
   position: relative;
+  max-width: rem(500);
+  margin: 0 auto;
   padding: rem(153) rem(24) rem(23);
   background-size: cover;
   background-position: top right;

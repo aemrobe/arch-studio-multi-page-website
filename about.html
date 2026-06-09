@@ -17,46 +17,56 @@
   </head>
   <body>
     <header class="header">
-      <a
-        href="index.html"
-        class="header__logo-link"
-        aria-label="Arch Studio Home"
-      >
-        <img
-          src="./assets/logo.svg"
-          alt="Arch Studio Logo"
-          class="header__logo"
-        />
-      </a>
+      <div class="header__wrapper">
+        <a
+          href="index.html"
+          class="header__logo-link"
+          aria-label="Arch Studio Home"
+        >
+          <img
+            src="./assets/logo.svg"
+            alt="Arch Studio Logo"
+            class="header__logo"
+          />
+        </a>
 
-      <button
-        class="header__menu-toggle"
-        aria-expanded="false"
-        aria-controls="main-nav"
-        aria-label="Open navigation menu"
-      >
-        <img
-          src="./assets/icons/icon-hamburger.svg"
-          aria-hidden="true"
-          alt=""
-        />
-      </button>
+        <button
+          class="header__menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Open navigation menu"
+        >
+          <img
+            src="./assets/icons/icon-hamburger.svg"
+            aria-hidden="true"
+            alt=""
+          />
+        </button>
+      </div>
 
-      <nav class="navigation" id="main-nav">
-        <ul class="navigation__list">
-          <li class="navigation__list-item">
-            <a href="portfolio.html" class="navigation__link">Portfolio</a>
-          </li>
+      <div class="navigation-wrapper">
+        <nav class="navigation" id="main-nav">
+          <ul class="navigation__list">
+            <li class="navigation__list-item">
+              <a href="portfolio.html" class="navigation__link heading-s"
+                >Portfolio</a
+              >
+            </li>
 
-          <li class="navigation__list-item">
-            <a href="about.html" class="navigation__link">About us</a>
-          </li>
+            <li class="navigation__list-item">
+              <a href="about.html" class="navigation__link heading-s"
+                >About us</a
+              >
+            </li>
 
-          <li class="navigation__list-item">
-            <a href="contact.html" class="navigation__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+            <li class="navigation__list-item">
+              <a href="contact.html" class="navigation__link heading-s"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="about-main">

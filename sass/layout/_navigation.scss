@@ -1,3 +1,35 @@
-.navigation {
+@use "../abstracts" as *;
+
+.navigation-wrapper {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: rgba($color-dark, 0.5);
   display: none;
+
+  &.open {
+    display: flex;
+  }
+}
+
+.navigation {
+  background-color: $color-very-light-grey;
+  padding: rem(39) rem(48) rem(42);
+
+  width: calc(100% - rem(32));
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: rem(17);
+    }
+  }
+
+  &__link {
+    display: block;
+    pointer-events: all;
+    text-decoration: none;
+    color: $color-very-dark-blue;
+  }
 }

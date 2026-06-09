@@ -8,10 +8,15 @@
   color: $color-white;
   padding: rem(25) rem(32) rem(22) rem(37);
   display: inline-flex;
+  align-items: center;
   gap: rem(24);
   transition: all 0.3s;
   outline: rem(3) solid transparent;
   outline-offset: rem(3);
+
+  svg {
+    flex-shrink: 0;
+  }
 
   &:hover {
     background-color: $color-dark-grey;
@@ -41,6 +46,9 @@
   &--feature-mobile {
     display: flex;
     justify-content: center;
+    max-width: rem(500);
+    margin-left: auto;
+    margin-right: auto;
 
     @include respond(tab-port) {
       display: none;

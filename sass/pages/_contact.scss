@@ -79,6 +79,8 @@
   }
 
   &__form {
+    max-width: rem(540);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
   }

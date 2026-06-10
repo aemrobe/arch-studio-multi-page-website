@@ -73,4 +73,11 @@
       outline-offset: rem(3);
     }
   }
+
+  &--footer {
+    @include respond(tab-port) {
+      position: absolute;
+      right: rem(-155.6);
+    }
+  }
 }

@@ -13,15 +13,42 @@
 }
 
 .welcome {
+  position: relative;
   padding: rem(72) rem(32) rem(113);
+
+  @include respond(tab-port) {
+    padding: rem(248) 0 rem(220);
+  }
 
   &::before {
     @include horizontal-line;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__background-text {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+      color: $color-very-light-grey;
+      position: absolute;
+      top: rem(89);
+      z-index: -1;
+    }
   }
 
   &__title {
     padding-top: rem(69);
     margin-bottom: rem(22);
+
+    @include respond(tab-port) {
+      margin-bottom: rem(56);
+      padding-top: 0;
+      max-width: rem(446);
+    }
   }
 
   &__text {
@@ -38,20 +65,46 @@
   color: $color-white;
   background-image:
     linear-gradient(rgba($color-dark, 0.6), rgba($color-dark, 0.6)),
-    url("../../assets/home/mobile/image-small-team.jpg");
+    url("../../assets/home/tablet/image-small-team.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
 
   &__title {
     margin-bottom: rem(23);
+
+    @include respond(tab-port) {
+      max-width: rem(445);
+      margin-bottom: rem(27);
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: rem(167) rem(70) rem(168) rem(58);
   }
 }
 
 .featured {
   padding: rem(73) rem(32) rem(171);
 
+  @include respond(tab-port) {
+    padding: rem(200) rem(0);
+  }
+
+  &__heading-wrapper {
+    @include respond(tab-port) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: rem(85);
+    }
+  }
+
   &__title {
     margin-bottom: rem(43);
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 }

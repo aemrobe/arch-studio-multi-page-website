@@ -1,38 +1,76 @@
 @use "../abstracts" as *;
 
 .footer {
-  position: relative;
   background-color: $color-very-light-grey;
-  padding-top: rem(93);
   padding: rem(93) rem(32) rem(48);
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  @include respond(tab-port) {
+    position: relative;
+    flex-direction: row;
+    padding: 0;
+    width: 79.7%;
+  }
+
   &__logo-container {
-    display: inline-block;
-    padding: rem(49) rem(30) rem(46.87) rem(32);
+    padding: 0 rem(30) 0 rem(32);
     background-color: $color-very-dark-blue;
     color: $color-white;
     transform: translateY(-50%);
     position: absolute;
     top: 0;
+    height: rem(120);
+    width: rem(120);
+    display: flex;
+
+    @include respond(tab-port) {
+      position: static;
+      transform: translateY(0);
+      margin-right: rem(40);
+    }
   }
 
   &__list {
     list-style: none;
+
+    @include respond(tab-port) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__list-item {
     text-align: center;
-  }
 
-  &__list-item:not(:last-child) {
-    margin-bottom: rem(32);
-  }
+    &:first-child {
+      @include respond(tab-port) {
+        margin-right: rem(61);
+      }
+    }
 
-  &__list-item:last-child {
-    margin-bottom: rem(31);
+    &:nth-last-child(2) {
+      @include respond(tab-port) {
+        margin-right: rem(51);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(32);
+
+      @include respond(tab-port) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: rem(31);
+
+      @include respond(tab-port) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__link {

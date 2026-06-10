@@ -28,13 +28,26 @@ $letter-spacing-none: 0em;
 $paragraph-spacing: rem(25);
 
 $heading-scale: (
-  "xl": (
-    size: 250,
+  "xl-only": (
+    size: rem(250),
     family: $font-league-spartan,
     weight: bold,
-    height: 0.8,
-    //200px line-height
-    letter: -5,
+    height: rem(200),
+    letter: rem(-5),
+  ),
+  "xl": (
+    size: rem(120),
+    family: $font-league-spartan,
+    weight: bold,
+    height: rem(200),
+    letter: rem(-3),
+    desktop: (
+      size: rem(250),
+      family: $font-league-spartan,
+      weight: bold,
+      height: rem(200),
+      letter: rem(-5),
+    ),
   ),
   "l": (
     size: rem(48),

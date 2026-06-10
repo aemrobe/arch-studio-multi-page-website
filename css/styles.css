@@ -56,12 +56,20 @@ body {
   letter-spacing: 0em;
 }
 
-.heading-xl {
-  font-size: 250;
-  letter-spacing: -5;
+.heading-xl-only {
+  font-size: 15.625rem;
+  letter-spacing: -0.3125rem;
   font-family: "League Spartan", sans-serif;
   font-weight: bold;
-  line-height: 0.8;
+  line-height: 12.5rem;
+}
+
+.heading-xl {
+  font-size: 7.5rem;
+  letter-spacing: -0.1875rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  line-height: 12.5rem;
 }
 
 .heading-l {
@@ -242,6 +250,12 @@ body {
   outline: 0.1875rem solid #1b1d23;
   outline-offset: 0.1875rem;
 }
+@media (min-width: 768px) {
+  .link--footer {
+    position: absolute;
+    right: -9.725rem;
+  }
+}
 
 .project-card {
   position: relative;
@@ -251,6 +265,11 @@ body {
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .project-card {
+    max-width: 35.8125rem;
+  }
 }
 .project-card:not(:last-child) {
   margin-bottom: 1.5rem;
@@ -275,41 +294,112 @@ body {
 .project-card__number {
   display: none;
 }
+@media (min-width: 768px) {
+  .project-card__number {
+    display: block;
+    position: absolute;
+    margin: auto 0;
+    right: 1rem;
+    top: 1.8125rem;
+    color: #fff;
+    opacity: 50%;
+  }
+}
 .project-card--1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-seraph.jpg");
+}
+@media (min-width: 768px) {
+  .project-card--1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-seraph.jpg");
+  }
 }
 .project-card--2 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-eebox.jpg");
 }
+@media (min-width: 768px) {
+  .project-card--2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-eebox.jpg");
+  }
+}
 .project-card--3 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-federal.jpg");
+}
+@media (min-width: 768px) {
+  .project-card--3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-federal.jpg");
+  }
 }
 .project-card--4 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-del-sol.jpg");
 }
+@media (min-width: 768px) {
+  .project-card--4 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-del-sol.jpg");
+  }
+}
 .project-card--5 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-228b.jpg");
+}
+@media (min-width: 768px) {
+  .project-card--5 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-228b.jpg");
+  }
 }
 .project-card--6 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-prototype.jpg");
 }
+@media (min-width: 768px) {
+  .project-card--6 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-prototype.jpg");
+  }
+}
 .project-card--7 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-edelweiss.jpg");
+}
+@media (min-width: 768px) {
+  .project-card--7 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-edelweiss.jpg");
+  }
 }
 .project-card--8 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-netcry.jpg");
 }
+@media (min-width: 768px) {
+  .project-card--8 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-netcry.jpg");
+  }
+}
 .project-card--9 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-hypers.jpg");
+}
+@media (min-width: 768px) {
+  .project-card--9 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-hypers.jpg");
+  }
 }
 .project-card--10 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-sxiv.jpg");
 }
+@media (min-width: 768px) {
+  .project-card--10 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-sxiv.jpg");
+  }
+}
 .project-card--11 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-trinity.jpg");
 }
+@media (min-width: 768px) {
+  .project-card--11 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-trinity.jpg");
+  }
+}
 .project-card--12 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-paramour.jpg");
+}
+@media (min-width: 768px) {
+  .project-card--12 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-paramour.jpg");
+  }
 }
 
 .submit-btn {
@@ -510,34 +600,75 @@ body {
 }
 
 .footer {
-  position: relative;
   background-color: #eeeff4;
-  padding-top: 5.8125rem;
   padding: 5.8125rem 2rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .footer {
+    position: relative;
+    flex-direction: row;
+    padding: 0;
+    width: 79.7%;
+  }
+}
 .footer__logo-container {
-  display: inline-block;
-  padding: 3.0625rem 1.875rem 2.929375rem 2rem;
+  padding: 0 1.875rem 0 2rem;
   background-color: #1b1d23;
   color: #fff;
   transform: translateY(-50%);
   position: absolute;
   top: 0;
+  height: 7.5rem;
+  width: 7.5rem;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .footer__logo-container {
+    position: static;
+    transform: translateY(0);
+    margin-right: 2.5rem;
+  }
 }
 .footer__list {
   list-style: none;
 }
+@media (min-width: 768px) {
+  .footer__list {
+    display: flex;
+    align-items: center;
+  }
+}
 .footer__list-item {
   text-align: center;
+}
+@media (min-width: 768px) {
+  .footer__list-item:first-child {
+    margin-right: 3.8125rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__list-item:nth-last-child(2) {
+    margin-right: 3.1875rem;
+  }
 }
 .footer__list-item:not(:last-child) {
   margin-bottom: 2rem;
 }
+@media (min-width: 768px) {
+  .footer__list-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
 .footer__list-item:last-child {
   margin-bottom: 1.9375rem;
+}
+@media (min-width: 768px) {
+  .footer__list-item:last-child {
+    margin-bottom: 0;
+  }
 }
 .footer__link {
   display: inline-block;
@@ -558,7 +689,13 @@ body {
 }
 
 .welcome {
+  position: relative;
   padding: 4.5rem 2rem 7.0625rem;
+}
+@media (min-width: 768px) {
+  .welcome {
+    padding: 15.5rem 0 13.75rem;
+  }
 }
 .welcome::before {
   content: "";
@@ -567,9 +704,33 @@ body {
   width: 4.0625rem;
   background-color: #c8ccd8;
 }
+@media (min-width: 768px) {
+  .welcome::before {
+    display: none;
+  }
+}
+.welcome__background-text {
+  display: none;
+}
+@media (min-width: 768px) {
+  .welcome__background-text {
+    display: block;
+    color: #eeeff4;
+    position: absolute;
+    top: 5.5625rem;
+    z-index: -1;
+  }
+}
 .welcome__title {
   padding-top: 4.3125rem;
   margin-bottom: 1.375rem;
+}
+@media (min-width: 768px) {
+  .welcome__title {
+    margin-bottom: 3.5rem;
+    padding-top: 0;
+    max-width: 27.875rem;
+  }
 }
 .welcome__text {
   color: #60636d;
@@ -581,7 +742,7 @@ body {
 .about {
   padding: 11.3125rem 2rem 11.25rem;
   color: #fff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/home/mobile/image-small-team.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/home/tablet/image-small-team.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
@@ -589,12 +750,41 @@ body {
 .about__title {
   margin-bottom: 1.4375rem;
 }
+@media (min-width: 768px) {
+  .about__title {
+    max-width: 27.8125rem;
+    margin-bottom: 1.6875rem;
+  }
+}
+@media (min-width: 768px) {
+  .about {
+    padding: 10.4375rem 4.375rem 10.5rem 3.625rem;
+  }
+}
 
 .featured {
   padding: 4.5625rem 2rem 10.6875rem;
 }
+@media (min-width: 768px) {
+  .featured {
+    padding: 12.5rem 0rem;
+  }
+}
+@media (min-width: 768px) {
+  .featured__heading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5.3125rem;
+  }
+}
 .featured__title {
   margin-bottom: 2.6875rem;
+}
+@media (min-width: 768px) {
+  .featured__title {
+    margin-bottom: 0;
+  }
 }
 
 .portfolio-main {

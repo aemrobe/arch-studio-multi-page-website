@@ -27,13 +27,25 @@ body {
 
     @if $size == "m" or $size == "l" {
       @include respond(tab-port) {
-        $big-screen-size-props: map.get($properties, tablet);
+        $tab-screen-size-props: map.get($properties, tablet);
 
-        font-size: map.get($big-screen-size-props, size);
-        letter-spacing: map.get($big-screen-size-props, letter);
-        font-family: map.get($big-screen-size-props, family);
-        font-weight: map.get($big-screen-size-props, weight);
-        line-height: map.get($big-screen-size-props, height);
+        font-size: map.get($tab-screen-size-props, size);
+        letter-spacing: map.get($tab-screen-size-props, letter);
+        font-family: map.get($tab-screen-size-props, family);
+        font-weight: map.get($tab-screen-size-props, weight);
+        line-height: map.get($tab-screen-size-props, height);
+      }
+    }
+
+    @if $size == "xl" {
+      @include respond(tab-land) {
+        $desktop-screen-size-props: map.get($properties, desktop);
+
+        font-size: map.get($desktop-screen-size-props, size);
+        letter-spacing: map.get($desktop-screen-size-props, letter);
+        font-family: map.get($desktop-screen-size-props, family);
+        font-weight: map.get($desktop-screen-size-props, weight);
+        line-height: map.get($desktop-screen-size-props, height);
       }
     }
   }

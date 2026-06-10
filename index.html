@@ -193,6 +193,10 @@
       </section>
 
       <section class="welcome">
+        <p aria-hidden="true" class="welcome__background-text heading-xl">
+          Welcome
+        </p>
+
         <h2 class="heading-m welcome__title">Welcome to Arch Studio</h2>
 
         <p class="paragraph welcome__text">
@@ -237,7 +241,7 @@
       </section>
 
       <section class="featured" aria-labelledby="featured-section-heading">
-        <div>
+        <div class="featured__heading-wrapper">
           <h2 id="featured-section-heading" class="heading-m featured__title">
             Featured
           </h2>
@@ -261,7 +265,7 @@
         </div>
 
         <ul class="featured__list">
-          <li class="project-card project-card--1">
+          <li class="project-card project-card--4">
             <a
               href="portfolio.html"
               class="project-card__link-wrapper"
@@ -273,7 +277,12 @@
                 <p class="project-card__text">View All Projects</p>
               </div>
 
-              <p class="project-card__number" aria-hidden="true">1</p>
+              <p
+                class="project-card__number heading-xl-only"
+                aria-hidden="true"
+              >
+                1
+              </p>
             </a>
           </li>
 
@@ -289,11 +298,16 @@
                 <p class="project-card__text">View All Projects</p>
               </div>
 
-              <p class="project-card__number" aria-hidden="true">2</p>
+              <p
+                class="project-card__number heading-xl-only"
+                aria-hidden="true"
+              >
+                2
+              </p>
             </a>
           </li>
 
-          <li class="project-card project-card--3">
+          <li class="project-card project-card--5">
             <a
               href="portfolio.html"
               class="project-card__link-wrapper"
@@ -305,7 +319,12 @@
                 <p class="project-card__text">View All Projects</p>
               </div>
 
-              <p class="project-card__number" aria-hidden="true">3</p>
+              <p
+                class="project-card__number heading-xl-only"
+                aria-hidden="true"
+              >
+                3
+              </p>
             </a>
           </li>
         </ul>
@@ -355,7 +374,7 @@
         </ul>
       </nav>
 
-      <a href="portfolio.html" class="link"
+      <a href="portfolio.html" class="link link--footer"
         ><span> See Our Portfolio</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
           <g

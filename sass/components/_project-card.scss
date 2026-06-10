@@ -9,6 +9,10 @@
   background-position: top right;
   background-repeat: no-repeat;
 
+  @include respond(tab-port) {
+    max-width: rem(573);
+  }
+
   &:not(:last-child) {
     margin-bottom: rem(24);
   }
@@ -37,77 +41,208 @@
 
   &__number {
     display: none;
+
+    @include respond(tab-port) {
+      display: block;
+      position: absolute;
+      margin: auto 0;
+
+      right: rem(16);
+      top: rem(29);
+      color: $color-white;
+      opacity: 50%;
+    }
   }
 
   &--1 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-seraph.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-seraph.jpg");
+    }
   }
 
   &--2 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-eebox.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-eebox.jpg");
+    }
   }
 
   &--3 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-federal.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-federal.jpg");
+    }
   }
 
   &--4 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-del-sol.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-del-sol.jpg");
+    }
   }
 
   &--5 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-228b.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-228b.jpg");
+    }
   }
 
   &--6 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-prototype.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-prototype.jpg");
+    }
   }
 
   &--7 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-edelweiss.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-edelweiss.jpg");
+    }
   }
 
   &--8 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-netcry.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-netcry.jpg");
+    }
   }
 
   &--9 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-hypers.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-hypers.jpg");
+    }
   }
 
   &--10 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-sxiv.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-sxiv.jpg");
+    }
   }
 
   &--11 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-trinity.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-trinity.jpg");
+    }
   }
 
   &--12 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-paramour.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-paramour.jpg");
+    }
   }
 }

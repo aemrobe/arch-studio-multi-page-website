@@ -269,6 +269,7 @@ body {
 @media (min-width: 768px) {
   .project-card {
     max-width: 35.8125rem;
+    padding: 8.5625rem 2.5rem 2.4375rem;
   }
 }
 .project-card:not(:last-child) {
@@ -338,19 +339,19 @@ body {
   }
 }
 .project-card--5 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-228b.jpg");
-}
-@media (min-width: 768px) {
-  .project-card--5 {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-228b.jpg");
-  }
-}
-.project-card--6 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-prototype.jpg");
 }
 @media (min-width: 768px) {
-  .project-card--6 {
+  .project-card--5 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-prototype.jpg");
+  }
+}
+.project-card--6 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/mobile/image-228b.jpg");
+}
+@media (min-width: 768px) {
+  .project-card--6 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../../assets/portfolio/tablet/image-228b.jpg");
   }
 }
 .project-card--7 {
@@ -793,7 +794,8 @@ body {
 }
 @media (min-width: 768px) {
   .portfolio-main {
-    padding: 0 6.125rem 0 6.0625rem;
+    padding: 0 6.125rem 12.5rem 6.0625rem;
+    margin-top: 0;
   }
 }
 

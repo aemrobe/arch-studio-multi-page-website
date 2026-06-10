@@ -11,6 +11,7 @@
 
   @include respond(tab-port) {
     max-width: rem(573);
+    padding: rem(137) rem(40) rem(39);
   }
 
   &:not(:last-child) {
@@ -121,22 +122,6 @@
   &--5 {
     background-image:
       linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-228b.jpg");
-
-    @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-228b.jpg");
-    }
-  }
-
-  &--6 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
       url("../../assets/portfolio/mobile/image-prototype.jpg");
 
     @include respond(tab-port) {
@@ -147,6 +132,22 @@
           rgba($color-dark, 50%)
         ),
         url("../../assets/portfolio/tablet/image-prototype.jpg");
+    }
+  }
+
+  &--6 {
+    background-image:
+      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+      url("../../assets/portfolio/mobile/image-228b.jpg");
+
+    @include respond(tab-port) {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba($color-dark, 0%),
+          rgba($color-dark, 50%)
+        ),
+        url("../../assets/portfolio/tablet/image-228b.jpg");
     }
   }
 

@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .contact-main {
-  p:not(.error-text, .page-label) {
+  p:not(.error-text, .page-label, .decoration-title) {
     color: $color-dark-grey;
   }
 
@@ -13,33 +13,93 @@
 .tell-us {
   padding: rem(260) 0 rem(100);
 
+  @include respond(tab-port) {
+    position: relative;
+    padding: rem(377) 0 0 rem(117);
+    margin-bottom: rem(200);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include respond(tab-port) {
+      max-width: rem(456);
+      &::before {
+        @include horizontal-line;
+      }
+    }
+  }
+
   &__title {
     margin-bottom: rem(21);
     max-width: 11ch;
+    letter-spacing: rem(-1.2);
+
+    @include respond(tab-port) {
+      margin-top: rem(73);
+      max-width: unset;
+      letter-spacing: rem(-2);
+    }
   }
 
   &__text {
     max-width: rem(592);
   }
 
-  &::before {
+  &::after {
     @include geometric-hero-shape("../../assets/contact/mobile/image-hero.jpg");
-  }
 
-  & ~ section h2 {
-    max-width: 7ch;
+    @include respond(tab-port) {
+      @include geometric-hero-shape(
+        "../../assets/contact/tablet/image-hero.jpg"
+      );
+    }
   }
 }
 
 .contact-details {
   padding-bottom: rem(73);
 
-  &__title {
-    margin-bottom: rem(40);
+  @include respond(tab-port) {
+    padding-bottom: rem(199);
   }
 
-  &__list-item:not(:last-child) {
+  &::before {
+    @include horizontal-line;
+  }
+
+  &__title {
     margin-bottom: rem(40);
+    max-width: 7ch;
+
+    @include respond(tab-port) {
+      margin-top: rem(49);
+      margin-bottom: rem(42);
+    }
+  }
+
+  &__list {
+    margin-bottom: rem(71);
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      gap: rem(43);
+      margin-bottom: rem(226);
+      max-width: rem(573);
+    }
+  }
+
+  &__list-item {
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
 
   &__list-title {
@@ -49,13 +109,21 @@
     margin-bottom: rem(14);
   }
 
-  &__list {
-    margin-bottom: rem(71);
-  }
-
   &__list-text {
     &:last-of-type {
       margin-bottom: rem(43);
+    }
+
+    @include respond(tab-port) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__list-link {
+    @include respond(tab-port) {
+      margin-bottom: rem(13);
     }
   }
 
@@ -64,14 +132,28 @@
     display: block;
     margin: 0 auto;
     max-width: rem(375);
+
+    @include respond(tab-port) {
+      max-width: rem(573);
+    }
   }
 }
 
 .connect-with-us {
   padding: 0 0 rem(132);
 
+  @include respond(tab-port) {
+    padding: 0 0 rem(200);
+  }
+
   &__title {
     margin-bottom: rem(32);
+    max-width: 7ch;
+
+    @include respond(tab-port) {
+      max-width: unset;
+      margin-bottom: rem(50);
+    }
   }
 
   &__form {
@@ -79,6 +161,10 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+
+    @include respond(tab-port) {
+      max-width: rem(572);
+    }
   }
 
   &__input-container {

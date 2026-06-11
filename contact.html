@@ -75,18 +75,19 @@
       </div>
 
       <section class="tell-us" aria-labelledby="tell-us-heading">
-        <h2
-          id="tell-us-heading"
-          class="tell-us__title heading-m letter-spacing-small"
-        >
-          Tell us about your project
-        </h2>
+        <div class="tell-us__wrapper">
+          <p class="decoration-title heading-xl" aria-hidden="true">Contact</p>
 
-        <p class="tell-us__text">
-          We’d love to hear more about your project. Please, leave a message
-          below or give us a call. We have two offices, one in Texas and one in
-          Tennessee. If you find yourself nearby, come say hello!
-        </p>
+          <h2 id="tell-us-heading" class="tell-us__title heading-m">
+            Tell us about your project
+          </h2>
+
+          <p class="tell-us__text">
+            We’d love to hear more about your project. Please, leave a message
+            below or give us a call. We have two offices, one in Texas and one
+            in Tennessee. If you find yourself nearby, come say hello!
+          </p>
+        </div>
       </section>
 
       <section
@@ -102,14 +103,19 @@
 
         <ul class="contact-details__list">
           <li class="contact-details__list-item">
-            <h3 class="contact-details__list-title">Main Office</h3>
-            <p class="contact-details__list-text">Mail: archone@mail.com</p>
-            <p class="contact-details__list-text">
-              Address: 1892 Chenoweth Drive TN
-            </p>
-            <p class="contact-details__list-text">Phone: 123-456-3451</p>
+            <div class="contact-details__list-wrapper">
+              <h3 class="contact-details__list-title">Main Office</h3>
 
-            <a href="portfolio.html" class="link link--feature-white"
+              <p class="contact-details__list-text">Mail: archone@mail.com</p>
+              <p class="contact-details__list-text">
+                Address: 1892 Chenoweth Drive TN
+              </p>
+              <p class="contact-details__list-text">Phone: 123-456-3451</p>
+            </div>
+
+            <a
+              href="portfolio.html"
+              class="contact-details__list-link link link--feature-white"
               ><span> View on Map</span>
 
               <svg
@@ -130,12 +136,15 @@
           </li>
 
           <li class="contact-details__list-item">
-            <h3 class="contact-details__list-title">Office II</h3>
-            <p class="contact-details__list-text">Mail: archtwo@mail.com</p>
-            <p class="contact-details__list-text">
-              Address: 3399 Wines Lane TX
-            </p>
-            <p class="contact-details__list-text">Phone: 832-123-4321</p>
+            <div class="contact-details__list-wrapper">
+              <h3 class="contact-details__list-title">Office II</h3>
+
+              <p class="contact-details__list-text">Mail: archtwo@mail.com</p>
+              <p class="contact-details__list-text">
+                Address: 3399 Wines Lane TX
+              </p>
+              <p class="contact-details__list-text">Phone: 832-123-4321</p>
+            </div>
 
             <a href="portfolio.html" class="link link--feature-white"
               ><span>View on Map</span>
@@ -160,7 +169,7 @@
 
         <img
           class="contact-details__img"
-          src="./assets//contact//mobile/image-map.png"
+          src="./assets//contact//tablet/image-map.png"
           alt="locations on a map"
         />
       </section>

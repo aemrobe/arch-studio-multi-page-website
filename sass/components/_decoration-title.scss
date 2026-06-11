@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.decoration-title {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+    position: absolute;
+    color: $color-very-light-grey;
+    bottom: 105%;
+    right: 0;
+    line-height: 1;
+  }
+}

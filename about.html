@@ -71,23 +71,26 @@
 
     <main class="about-main">
       <div class="page-label-container">
-        <h1 class="sr-only page-label">About Us</h1>
+        <h1 aria-label="About us" class="page-label">About us</h1>
       </div>
 
       <section class="team-intro" aria-labelledby="team-title">
-        <h2
-          id="team-title"
-          class="heading-m letter-spacing-small team-intro__title"
-        >
-          Your team of professionals
-        </h2>
+        <div class="team-intro__wrapper">
+          <p class="team-intro__decoration-title heading-xl" aria-hidden="true">
+            About
+          </p>
 
-        <p class="team-intro__text">
-          Our small team of world-class professionals will work with you every
-          step of the way. Strong relationships are at the core of everything we
-          do. This extends to the relationship our projects have with their
-          surroundings.
-        </p>
+          <h2 id="team-title" class="heading-m team-intro__title">
+            Your team of professionals
+          </h2>
+
+          <p class="team-intro__text">
+            Our small team of world-class professionals will work with you every
+            step of the way. Strong relationships are at the core of everything
+            we do. This extends to the relationship our projects have with their
+            surroundings.
+          </p>
+        </div>
       </section>
 
       <section class="heritage" aria-labelledby="heritage-title">

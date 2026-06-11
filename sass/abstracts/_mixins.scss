@@ -13,6 +13,7 @@
   content: "";
   display: block;
   position: absolute;
+  z-index: -1;
   top: 0;
   inset-inline: 0;
   height: rem(240);
@@ -29,6 +30,18 @@
     calc(100% - 32px) calc(100% - 45px),
     0% calc(100% - 45px)
   );
+
+  @include respond(tab-port) {
+    height: 100%;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% rem(289),
+      rem(58) rem(289),
+      rem(58) 100%,
+      0% 100%
+    );
+  }
 }
 
 @mixin horizontal-line {

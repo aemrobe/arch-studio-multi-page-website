@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .footer {
+  position: relative;
   background-color: $color-very-light-grey;
   padding: rem(93) rem(32) rem(48);
   display: flex;
@@ -8,7 +9,6 @@
   align-items: center;
 
   @include respond(tab-port) {
-    position: relative;
     flex-direction: row;
     padding: 0;
     width: 79.7%;

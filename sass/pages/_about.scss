@@ -1,39 +1,75 @@
 @use "../abstracts" as *;
 
 .about-main {
-  padding: 0 rem(32);
-
-  @include respond(tab-port) {
-    padding: 0 rem(98) 0 rem(97);
-  }
-
   h2,
   h3 {
     color: $color-very-dark-blue;
   }
 
-  p {
+  p:not(.page-label, .team-intro__decoration-title) {
     color: $color-dark-grey;
-  }
-
-  section {
-    max-width: rem(641);
   }
 }
 
 .team-intro {
   padding: rem(261) 0 rem(76);
 
-  &::before {
-    @include geometric-hero-shape("../../assets/about/mobile/image-hero.jpg");
+  @include respond(tab-port) {
+    position: relative;
+    padding: rem(377) 0 0 rem(117);
+    margin-bottom: rem(202);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &::after {
+    @include geometric-hero-shape("../assets/about/mobile/image-hero.jpg");
+
+    @include respond(tab-port) {
+      @include geometric-hero-shape("../../assets/about/tablet/image-hero.jpg");
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include respond(tab-port) {
+      &::before {
+        @include horizontal-line;
+      }
+    }
+  }
+
+  &__decoration-title {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+      position: absolute;
+      color: $color-very-light-grey;
+      bottom: 105%;
+      right: 0;
+      line-height: 1;
+    }
   }
 
   &__title {
     max-width: rem(311);
+    letter-spacing: rem(-1.2);
+
+    @include respond(tab-port) {
+      margin-top: rem(73);
+      max-width: rem(456);
+      letter-spacing: rem(-2);
+    }
   }
 
   &__text {
     margin: rem(20) 0 0;
+
+    @include respond(tab-port) {
+      max-width: rem(456);
+    }
   }
 
   & ~ section h2 {
@@ -44,16 +80,28 @@
 .heritage {
   padding-bottom: rem(112);
 
+  @include respond(tab-port) {
+    padding-bottom: rem(231);
+  }
+
   &::before {
     @include horizontal-line;
   }
 
   &__title {
     margin-top: rem(69);
+    margin-bottom: rem(22);
+
+    @include respond(tab-port) {
+      margin-top: rem(49);
+      margin-bottom: rem(62);
+    }
   }
 
   &__text {
-    margin-top: rem(22);
+    @include respond(tab-port) {
+      max-width: rem(669);
+    }
   }
 
   &__text:not(:last-child) {
@@ -64,6 +112,20 @@
 .leaders {
   padding-bottom: rem(171);
 
+  @include respond(tab-port) {
+    padding-bottom: rem(239);
+  }
+
+  &__list {
+    @include respond(tab-port) {
+      max-width: rem(700);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: rem(103) rem(11);
+    }
+  }
+
   &__list-item {
     max-width: rem(350);
     margin-left: auto;
@@ -72,21 +134,37 @@
 
   &__list-item:not(:last-child) {
     margin-bottom: rem(79);
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
     margin-bottom: rem(55);
+
+    @include respond(tab-port) {
+      margin-bottom: rem(49);
+    }
   }
 
   &__image-container {
     display: block;
     width: 100%;
     margin-bottom: rem(15);
+
+    @include respond(tab-port) {
+      height: rem(256);
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(tab-port) {
+      height: 100%;
+    }
   }
 
   .leaders__text {

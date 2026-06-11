@@ -1,11 +1,7 @@
 @use "../abstracts" as *;
 
 .contact-main {
-  @include respond(tab-port) {
-    padding: 0 rem(98) 0 rem(97);
-  }
-
-  p:not(.error-text) {
+  p:not(.error-text, .page-label) {
     color: $color-dark-grey;
   }
 
@@ -15,7 +11,7 @@
 }
 
 .tell-us {
-  padding: rem(260) rem(32) rem(100);
+  padding: rem(260) 0 rem(100);
 
   &__title {
     margin-bottom: rem(21);
@@ -39,7 +35,6 @@
   padding-bottom: rem(73);
 
   &__title {
-    padding: 0 rem(32);
     margin-bottom: rem(40);
   }
 
@@ -55,7 +50,6 @@
   }
 
   &__list {
-    padding: 0 rem(32);
     margin-bottom: rem(71);
   }
 
@@ -74,7 +68,7 @@
 }
 
 .connect-with-us {
-  padding: 0 rem(32) rem(132);
+  padding: 0 0 rem(132);
 
   &__title {
     margin-bottom: rem(32);

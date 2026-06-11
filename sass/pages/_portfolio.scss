@@ -2,10 +2,10 @@
 
 .portfolio-main {
   margin-top: rem(55.97);
-  padding: 0 rem(32) rem(132);
+  padding-bottom: rem(132);
 
   @include respond(tab-port) {
-    padding: 0 rem(98) rem(200) rem(97);
+    padding-bottom: rem(200);
     margin-top: 0;
   }
 }

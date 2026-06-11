@@ -1,6 +1,8 @@
 @use "../abstracts" as *;
 
 .home-main {
+  padding: 0;
+
   @include respond(tab-port) {
     padding: 0 rem(98) 0 rem(97);
   }

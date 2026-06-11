@@ -439,9 +439,6 @@ body {
   position: absolute;
 }
 
-.page-label-container {
-  display: none;
-}
 @media (min-width: 768px) {
   .page-label-container {
     display: block;

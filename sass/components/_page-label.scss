@@ -1,8 +1,6 @@
 @use "../abstracts" as *;
 
 .page-label-container {
-  display: none;
-
   @include respond(tab-port) {
     display: block;
     position: static;

@@ -8,4 +8,8 @@
     padding-bottom: rem(200);
     margin-top: 0;
   }
+
+  &__list {
+    @extend %project-list-container;
+  }
 }

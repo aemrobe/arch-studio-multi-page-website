@@ -53,6 +53,11 @@
     pointer-events: all;
     text-decoration: none;
     color: $color-very-dark-blue;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-very-dark-blue;
+    }
 
     @include respond(tab-port) {
       font-size: rem(18);

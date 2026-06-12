@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  z-index: 50;
+  z-index: 150;
   pointer-events: none;
   min-height: 100vh;
   top: 0;
@@ -18,6 +18,11 @@
     background-color: $color-white;
   }
 
+  @include respond(desktop) {
+    max-width: rem(1440);
+    margin: 0 auto;
+  }
+
   &__wrapper {
     pointer-events: all;
     background-color: $color-white;
@@ -30,6 +35,10 @@
       padding: rem(56) 0 rem(56) rem(97);
       background-color: transparent;
       justify-content: flex-start;
+    }
+
+    @include respond(desktop) {
+      padding-left: rem(165);
     }
   }
 
@@ -48,6 +57,10 @@
     @include respond(tab-port) {
       width: rem(96);
       margin-right: rem(78.87);
+    }
+
+    @include respond(desktop) {
+      margin-right: rem(94.84);
     }
   }
 }

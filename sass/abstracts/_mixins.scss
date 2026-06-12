@@ -1,9 +1,27 @@
 @use "./functions" as *;
 @use "./variables" as *;
 
+// ==========================================
+// MIXINS (Responsive layouts, etc.)
+// ==========================================
+
 @mixin respond($breakpoint) {
   @if $breakpoint == tab-port {
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
+      // 768px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (min-width: 64em) {
+      // 1024px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 80em) {
       @content;
     }
   }
@@ -50,4 +68,30 @@
   height: 1px;
   width: rem(65);
   background-color: $color-light-grey;
+}
+
+@mixin project-card-background-image($url) {
+  background-image:
+    linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
+    url($url);
+}
+
+// ==========================================
+// PLACEHOLDERS
+// ==========================================
+%project-list-container {
+  display: grid;
+  max-width: rem(500);
+  margin: 0 auto;
+  gap: rem(24);
+
+  @include respond(tab-port) {
+    max-width: rem(573);
+  }
+
+  @include respond(tab-land) {
+    max-width: unset;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30);
+  }
 }

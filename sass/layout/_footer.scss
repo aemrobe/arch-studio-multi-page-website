@@ -11,7 +11,14 @@
   @include respond(tab-port) {
     flex-direction: row;
     padding: 0;
-    width: 79.7%;
+    align-items: stretch;
+    background-color: transparent;
+  }
+
+  @include respond(desktop) {
+    padding: 0 rem(165);
+    max-width: rem(1440);
+    margin: 0 auto;
   }
 
   &__logo-container {
@@ -28,7 +35,37 @@
     @include respond(tab-port) {
       position: static;
       transform: translateY(0);
-      margin-right: rem(40);
+    }
+
+    @include respond(desktop) {
+      height: rem(200);
+      width: rem(200);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    width: rem(58);
+
+    @include respond(desktop) {
+      width: rem(96);
+    }
+  }
+
+  &__navigation {
+    @include respond(tab-port) {
+      position: relative;
+      width: 64.1%;
+      max-width: rem(784);
+      background-color: $color-very-light-grey;
+      padding-left: rem(40);
+      display: flex;
+    }
+
+    @include respond(desktop) {
+      padding-left: rem(85);
+      width: 70.65%;
     }
   }
 
@@ -79,5 +116,11 @@
     text-decoration: none;
     font-weight: bold;
     text-align: center;
+    line-height: rem(25);
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-very-dark-blue;
+    }
   }
 }

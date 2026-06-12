@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.slider-nav {
+  z-index: 120;
+  list-style-type: none;
+
+  display: flex;
+
+  &__item {
+    background-color: $color-white;
+  }
+
+  &__link {
+    line-height: rem(25);
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-medium-grey;
+    display: flex;
+    height: rem(80);
+    width: rem(80);
+    padding: rem(28) rem(32) rem(27) rem(31);
+    transition: all 0.3s;
+
+    &:not(&--active):hover {
+      background-color: $color-very-light-grey;
+    }
+
+    &--active {
+      background-color: $color-very-dark-blue;
+      color: $color-white;
+    }
+  }
+}

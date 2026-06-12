@@ -30,6 +30,10 @@
   align-items: center;
   height: rem(50);
 
+  @include respond(desktop) {
+    transform: translateX(rem(-78)) rotate(90deg);
+  }
+
   &::before {
     content: "";
     display: block;

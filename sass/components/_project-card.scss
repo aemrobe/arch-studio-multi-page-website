@@ -2,20 +2,20 @@
 
 .project-card {
   position: relative;
-  max-width: rem(500);
-  margin: 0 auto;
   padding: rem(153) rem(24) rem(23);
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
 
   @include respond(tab-port) {
-    max-width: rem(573);
     padding: rem(137) rem(40) rem(39);
   }
 
-  &:not(:last-child) {
-    margin-bottom: rem(24);
+  @include respond(tab-land) {
+    padding: 0 rem(40) rem(39);
+    height: rem(560);
+    display: flex;
+    align-items: flex-end;
   }
 
   &__link-wrapper {
@@ -53,197 +53,226 @@
       color: $color-white;
       opacity: 50%;
     }
+
+    @include respond(tab-land) {
+      top: rem(45);
+      right: rem(-10);
+    }
   }
 
   &--1 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-seraph.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-seraph.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-seraph.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-seraph.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-seraph.jpg"
+      );
     }
   }
 
   &--2 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-eebox.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-eebox.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-eebox.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-eebox.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-eebox.jpg"
+      );
     }
   }
 
   &--3 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-federal.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-federal.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-federal.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-federal.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-federal.jpg"
+      );
     }
   }
 
   &--4 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-del-sol.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-del-sol.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-del-sol.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-del-sol.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-del-sol.jpg"
+      );
     }
   }
 
   &--5 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-prototype.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-prototype.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-prototype.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-prototype.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-prototype.jpg"
+      );
     }
   }
 
   &--6 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-228b.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-228b.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-228b.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-228b.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-228b.jpg"
+      );
     }
   }
 
   &--7 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-edelweiss.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-edelweiss.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-edelweiss.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-edelweiss.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-edelweiss.jpg"
+      );
     }
   }
 
   &--8 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-netcry.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-netcry.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-netcry.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-netcry.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-netcry.jpg"
+      );
     }
   }
 
   &--9 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-hypers.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-hypers.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-hypers.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-hypers.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-hypers.jpg"
+      );
     }
   }
 
   &--10 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-sxiv.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-sxiv.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-sxiv.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-sxiv.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-sxiv.jpg"
+      );
     }
   }
 
   &--11 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-trinity.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-trinity.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-trinity.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-trinity.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-trinity.jpg"
+      );
     }
   }
 
   &--12 {
-    background-image:
-      linear-gradient(to bottom, rgba($color-dark, 0%), rgba($color-dark, 50%)),
-      url("../../assets/portfolio/mobile/image-paramour.jpg");
+    @include project-card-background-image(
+      "../../assets/portfolio/mobile/image-paramour.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba($color-dark, 0%),
-          rgba($color-dark, 50%)
-        ),
-        url("../../assets/portfolio/tablet/image-paramour.jpg");
+      @include project-card-background-image(
+        "../../assets/portfolio/tablet/image-paramour.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include project-card-background-image(
+        "../../assets/portfolio/desktop/image-paramour.jpg"
+      );
     }
   }
 }

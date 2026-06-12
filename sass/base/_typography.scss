@@ -38,7 +38,7 @@ body {
     }
 
     @if $size == "xl" {
-      @include respond(tab-land) {
+      @include respond(desktop) {
         $desktop-screen-size-props: map.get($properties, desktop);
 
         font-size: map.get($desktop-screen-size-props, size);

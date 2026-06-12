@@ -76,8 +76,13 @@
 
   &--footer {
     @include respond(tab-port) {
+      align-self: center;
       position: absolute;
-      right: rem(-155.6);
+      right: rem(-153);
+    }
+
+    @include respond(desktop) {
+      right: rem(-126);
     }
   }
 }

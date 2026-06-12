@@ -42,4 +42,9 @@ main {
   @include respond(tab-port) {
     padding: 0 rem(98) 0 rem(97);
   }
+
+  @include respond(desktop) {
+    max-width: rem(1440);
+    margin: 0 auto;
+  }
 }

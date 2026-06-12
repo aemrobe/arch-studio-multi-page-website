@@ -6,11 +6,30 @@
   @include respond(tab-port) {
     padding: 0 rem(98) 0 rem(97);
   }
+
+  @include respond(desktop) {
+    padding: 0 rem(165) 0 rem(165);
+  }
 }
 
 .hero {
+  @include respond(tab-land) {
+    position: relative;
+  }
+
   &__list {
     list-style-type: none;
+  }
+
+  &__nav {
+    display: none;
+
+    @include respond(tab-land) {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: rem(-80);
+    }
   }
 }
 
@@ -20,6 +39,22 @@
 
   @include respond(tab-port) {
     padding: rem(248) 0 rem(220);
+  }
+
+  @include respond(tab-land) {
+    padding: rem(269) 0 rem(211);
+    display: flex;
+  }
+
+  &__wrapper {
+    @include respond(tab-land) {
+      max-width: rem(448);
+      margin: 0 auto;
+    }
+
+    @include respond(desktop) {
+      margin-right: rem(125);
+    }
   }
 
   &::before {
@@ -40,6 +75,10 @@
       top: rem(89);
       z-index: -1;
     }
+
+    @include respond(tab-land) {
+      top: rem(108);
+    }
   }
 
   &__title {
@@ -51,6 +90,10 @@
       padding-top: 0;
       max-width: rem(446);
     }
+
+    @include respond(tab-land) {
+      margin-bottom: rem(43);
+    }
   }
 
   &__text {
@@ -59,6 +102,27 @@
 
   &__text:not(:last-child) {
     margin-bottom: $paragraph-spacing;
+  }
+
+  &::after {
+    @include respond(tab-land) {
+      content: "";
+      display: block;
+      width: rem(350);
+      height: rem(10);
+    }
+  }
+
+  &__decorative-image {
+    display: none;
+
+    @include respond(tab-land) {
+      display: block;
+      position: absolute;
+      top: rem(195);
+      right: 0;
+      z-index: -2;
+    }
   }
 }
 
@@ -72,6 +136,14 @@
   background-repeat: no-repeat;
   background-position: top right;
 
+  @include respond(tab-port) {
+    padding: rem(167) rem(70) rem(168) rem(58);
+  }
+
+  @include respond(tab-land) {
+    padding: rem(167) rem(70) rem(168) rem(190);
+  }
+
   &__title {
     margin-bottom: rem(23);
 
@@ -79,10 +151,6 @@
       max-width: rem(445);
       margin-bottom: rem(27);
     }
-  }
-
-  @include respond(tab-port) {
-    padding: rem(167) rem(70) rem(168) rem(58);
   }
 }
 
@@ -100,6 +168,10 @@
       justify-content: space-between;
       margin-bottom: rem(85);
     }
+
+    @include respond(tab-land) {
+      margin-bottom: rem(64);
+    }
   }
 
   &__title {
@@ -108,5 +180,9 @@
     @include respond(tab-port) {
       margin-bottom: 0;
     }
+  }
+
+  &__list {
+    @extend %project-list-container;
   }
 }

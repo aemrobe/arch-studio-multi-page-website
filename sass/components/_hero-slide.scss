@@ -12,11 +12,19 @@
     padding: rem(186) rem(58) rem(179) rem(58);
   }
 
+  @include respond(tab-land) {
+    padding: rem(186) rem(58) rem(179) rem(190);
+  }
+
   &__title {
     margin-bottom: rem(11);
 
     @include respond(tab-port) {
       max-width: rem(457);
+      margin-bottom: rem(10);
+    }
+
+    @include respond(tab-land) {
       margin-bottom: rem(10);
     }
   }
@@ -28,6 +36,10 @@
     @include respond(tab-port) {
       max-width: rem(457);
       margin-bottom: rem(33);
+    }
+
+    @include respond(tab-land) {
+      margin-bottom: rem(41);
     }
   }
 

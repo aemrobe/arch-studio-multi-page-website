@@ -17,7 +17,7 @@
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 160;
   transform: translateX(rem(-35)) rotate(90deg);
   transform-origin: left top;
   font-size: rem(18);
@@ -41,5 +41,13 @@
     height: rem(1);
     background-color: $color-light-grey;
     margin-right: rem(56);
+  }
+
+  &--portfolio {
+    &::before {
+      @include respond(tab-port) {
+        margin-right: rem(62);
+      }
+    }
   }
 }

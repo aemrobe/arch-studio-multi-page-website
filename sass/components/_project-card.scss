@@ -7,6 +7,25 @@
   background-position: top right;
   background-repeat: no-repeat;
 
+  &::after {
+    content: "";
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+    background-image: linear-gradient(
+      rgba($color-white, 0.5),
+      rgba($color-white, 0.5)
+    );
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
   @include respond(tab-port) {
     padding: rem(137) rem(40) rem(39);
   }
@@ -21,18 +40,25 @@
   &__link-wrapper {
     text-decoration: none;
     color: $color-white;
+    outline: none;
 
     &:focus-visible {
       outline: none;
       box-shadow: none;
     }
 
-    &:focus-visible::before {
+    &::before {
       content: "";
       position: absolute;
       inset: rem(-3);
 
       border: rem(3) solid $color-very-dark-blue;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:focus-visible::before {
+      opacity: 1;
     }
   }
 

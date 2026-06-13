@@ -36,12 +36,12 @@ body {
   }
 }
 
-a:not(.link):focus,
+a:not(.link, .project-card__link-wrapper):focus,
 button:focus,
 [role=button]:focus {
   outline: none;
 }
-a:not(.link):focus-visible,
+a:not(.link, .project-card__link-wrapper):focus-visible,
 button:focus-visible,
 [role=button]:focus-visible {
   outline: 0.1875rem solid #1b1d23;
@@ -64,6 +64,7 @@ main {
 @media (min-width: 80em) {
   main {
     max-width: 90rem;
+    padding: 0 10.3125rem 0 10.3125rem;
     margin: 0 auto;
   }
 }
@@ -320,6 +321,20 @@ body {
   background-position: top right;
   background-repeat: no-repeat;
 }
+.project-card::after {
+  content: "";
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  opacity: 0;
+}
+.project-card:hover::after {
+  opacity: 1;
+}
 @media (min-width: 48em) {
   .project-card {
     padding: 8.5625rem 2.5rem 2.4375rem;
@@ -336,16 +351,22 @@ body {
 .project-card__link-wrapper {
   text-decoration: none;
   color: #fff;
+  outline: none;
 }
 .project-card__link-wrapper:focus-visible {
   outline: none;
   box-shadow: none;
 }
-.project-card__link-wrapper:focus-visible::before {
+.project-card__link-wrapper::before {
   content: "";
   position: absolute;
   inset: -0.1875rem;
   border: 0.1875rem solid #1b1d23;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-card__link-wrapper:focus-visible::before {
+  opacity: 1;
 }
 .project-card__text {
   opacity: 75%;
@@ -581,7 +602,7 @@ body {
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 160;
   transform: translateX(-2.1875rem) rotate(90deg);
   transform-origin: left top;
   font-size: 1.125rem;
@@ -606,6 +627,11 @@ body {
   height: 0.0625rem;
   background-color: #c8ccd8;
   margin-right: 3.5rem;
+}
+@media (min-width: 48em) {
+  .page-label--portfolio::before {
+    margin-right: 3.875rem;
+  }
 }
 
 .decoration-title {
@@ -1109,6 +1135,12 @@ body {
   .portfolio-main {
     padding-bottom: 12.5rem;
     margin-top: 0;
+  }
+}
+@media (min-width: 64em) {
+  .portfolio-main {
+    padding-top: 0.375rem;
+    padding-bottom: 10rem;
   }
 }
 .about-main h2,

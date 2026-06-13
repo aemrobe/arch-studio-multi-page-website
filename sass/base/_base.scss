@@ -18,7 +18,7 @@ body {
   }
 }
 
-a:not(.link),
+a:not(.link, .project-card__link-wrapper),
 button,
 [role="button"] {
   &:focus {
@@ -45,6 +45,7 @@ main {
 
   @include respond(desktop) {
     max-width: rem(1440);
+    padding: 0 rem(165) 0 rem(165);
     margin: 0 auto;
   }
 }

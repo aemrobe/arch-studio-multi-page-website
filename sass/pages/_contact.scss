@@ -22,8 +22,6 @@
   }
 
   &__wrapper {
-    position: relative;
-
     @include respond(tab-port) {
       max-width: rem(456);
       &::before {
@@ -39,6 +37,7 @@
 
     @include respond(tab-port) {
       margin-top: rem(73);
+      margin-bottom: rem(37);
       max-width: unset;
       letter-spacing: rem(-2);
     }
@@ -46,6 +45,10 @@
 
   &__text {
     max-width: rem(592);
+
+    @include respond(desktop) {
+      max-width: rem(451);
+    }
   }
 
   &::after {
@@ -54,6 +57,13 @@
     @include respond(tab-port) {
       @include geometric-hero-shape(
         "../../assets/contact/tablet/image-hero.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include geometric-hero-shape(
+        "../../assets/contact/desktop/image-hero.jpg",
+        21px
       );
     }
   }

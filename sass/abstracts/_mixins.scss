@@ -22,12 +22,20 @@
 
   @if $breakpoint == desktop {
     @media (min-width: 80em) {
+      //1280px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-screen {
+    @media (min-width: 90em) {
+      //1440px
       @content;
     }
   }
 }
 
-@mixin geometric-hero-shape($image-path) {
+@mixin geometric-hero-shape($image-path, $bg-image-position: 0px) {
   content: "";
   display: block;
   position: absolute;
@@ -59,6 +67,31 @@
       rem(58) 100%,
       0% 100%
     );
+  }
+
+  @include respond(desktop) {
+    clip-path: polygon(
+      0% 0%,
+      rem(635) 0%,
+      rem(635) rem(217),
+      rem(420) rem(217),
+      rem(420) 100%,
+      0% 100%
+    );
+    background-size: contain;
+    background-position: top left $bg-image-position;
+  }
+
+  @include respond(big-screen) {
+    clip-path: polygon(
+      0% 0%,
+      rem(635) 0%,
+      rem(635) rem(217),
+      rem(485) rem(217),
+      rem(485) 100%,
+      0% 100%
+    );
+    background-size: contain;
   }
 }
 

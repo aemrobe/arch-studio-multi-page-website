@@ -677,9 +677,13 @@ body {
     display: block;
     position: absolute;
     color: #eeeff4;
-    bottom: 105%;
+    top: 12.5rem;
     right: 0;
-    line-height: 1;
+  }
+}
+@media (min-width: 80em) {
+  .decoration-title {
+    top: 8.125rem;
   }
 }
 
@@ -1219,6 +1223,19 @@ body {
     clip-path: polygon(0% 0%, 100% 0%, 100% 18.0625rem, 3.625rem 18.0625rem, 3.625rem 100%, 0% 100%);
   }
 }
+@media (min-width: 80em) {
+  .team-intro::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 26.25rem 13.5625rem, 26.25rem 100%, 0% 100%);
+    background-size: contain;
+    background-position: top left 0px;
+  }
+}
+@media (min-width: 90em) {
+  .team-intro::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 30.3125rem 13.5625rem, 30.3125rem 100%, 0% 100%);
+    background-size: contain;
+  }
+}
 @media (min-width: 48em) {
   .team-intro::after {
     content: "";
@@ -1240,8 +1257,52 @@ body {
     clip-path: polygon(0% 0%, 100% 0%, 100% 18.0625rem, 3.625rem 18.0625rem, 3.625rem 100%, 0% 100%);
   }
 }
-.team-intro__wrapper {
-  position: relative;
+@media (min-width: 48em) and (min-width: 80em) {
+  .team-intro::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 26.25rem 13.5625rem, 26.25rem 100%, 0% 100%);
+    background-size: contain;
+    background-position: top left 0px;
+  }
+}
+@media (min-width: 48em) and (min-width: 90em) {
+  .team-intro::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 30.3125rem 13.5625rem, 30.3125rem 100%, 0% 100%);
+    background-size: contain;
+  }
+}
+@media (min-width: 64em) {
+  .team-intro::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    inset-inline: 0;
+    height: 15rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/about/desktop/image-hero.jpg");
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, calc(100% - 32px) 100%, calc(100% - 32px) calc(100% - 45px), 0% calc(100% - 45px));
+  }
+}
+@media (min-width: 64em) and (min-width: 48em) {
+  .team-intro::after {
+    height: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 18.0625rem, 3.625rem 18.0625rem, 3.625rem 100%, 0% 100%);
+  }
+}
+@media (min-width: 64em) and (min-width: 80em) {
+  .team-intro::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 26.25rem 13.5625rem, 26.25rem 100%, 0% 100%);
+    background-size: contain;
+    background-position: top left 10px;
+  }
+}
+@media (min-width: 64em) and (min-width: 90em) {
+  .team-intro::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 30.3125rem 13.5625rem, 30.3125rem 100%, 0% 100%);
+    background-size: contain;
+  }
 }
 @media (min-width: 48em) {
   .team-intro__wrapper {
@@ -1266,8 +1327,23 @@ body {
     letter-spacing: -0.125rem;
   }
 }
+@media (min-width: 64em) {
+  .team-intro__title {
+    margin-top: 3.5625rem;
+  }
+}
 .team-intro__text {
   margin: 1.25rem 0 0;
+}
+@media (min-width: 48em) {
+  .team-intro__text {
+    margin-top: 2.375rem;
+  }
+}
+@media (min-width: 64em) {
+  .team-intro__text {
+    margin-top: 3.0625rem;
+  }
 }
 .team-intro ~ section h2 {
   max-width: 7ch;
@@ -1388,9 +1464,6 @@ body {
     justify-content: flex-end;
   }
 }
-.tell-us__wrapper {
-  position: relative;
-}
 @media (min-width: 48em) {
   .tell-us__wrapper {
     max-width: 28.5rem;
@@ -1411,12 +1484,18 @@ body {
 @media (min-width: 48em) {
   .tell-us__title {
     margin-top: 4.5625rem;
+    margin-bottom: 2.3125rem;
     max-width: unset;
     letter-spacing: -0.125rem;
   }
 }
 .tell-us__text {
   max-width: 37rem;
+}
+@media (min-width: 80em) {
+  .tell-us__text {
+    max-width: 28.1875rem;
+  }
 }
 .tell-us::after {
   content: "";
@@ -1435,6 +1514,19 @@ body {
   .tell-us::after {
     height: 100%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 18.0625rem, 3.625rem 18.0625rem, 3.625rem 100%, 0% 100%);
+  }
+}
+@media (min-width: 80em) {
+  .tell-us::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 26.25rem 13.5625rem, 26.25rem 100%, 0% 100%);
+    background-size: contain;
+    background-position: top left 0px;
+  }
+}
+@media (min-width: 90em) {
+  .tell-us::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 30.3125rem 13.5625rem, 30.3125rem 100%, 0% 100%);
+    background-size: contain;
   }
 }
 @media (min-width: 48em) {
@@ -1456,6 +1548,53 @@ body {
   .tell-us::after {
     height: 100%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 18.0625rem, 3.625rem 18.0625rem, 3.625rem 100%, 0% 100%);
+  }
+}
+@media (min-width: 48em) and (min-width: 80em) {
+  .tell-us::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 26.25rem 13.5625rem, 26.25rem 100%, 0% 100%);
+    background-size: contain;
+    background-position: top left 0px;
+  }
+}
+@media (min-width: 48em) and (min-width: 90em) {
+  .tell-us::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 30.3125rem 13.5625rem, 30.3125rem 100%, 0% 100%);
+    background-size: contain;
+  }
+}
+@media (min-width: 64em) {
+  .tell-us::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    inset-inline: 0;
+    height: 15rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/contact/desktop/image-hero.jpg");
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, calc(100% - 32px) 100%, calc(100% - 32px) calc(100% - 45px), 0% calc(100% - 45px));
+  }
+}
+@media (min-width: 64em) and (min-width: 48em) {
+  .tell-us::after {
+    height: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 18.0625rem, 3.625rem 18.0625rem, 3.625rem 100%, 0% 100%);
+  }
+}
+@media (min-width: 64em) and (min-width: 80em) {
+  .tell-us::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 26.25rem 13.5625rem, 26.25rem 100%, 0% 100%);
+    background-size: contain;
+    background-position: top left 21px;
+  }
+}
+@media (min-width: 64em) and (min-width: 90em) {
+  .tell-us::after {
+    clip-path: polygon(0% 0%, 39.6875rem 0%, 39.6875rem 13.5625rem, 30.3125rem 13.5625rem, 30.3125rem 100%, 0% 100%);
+    background-size: contain;
   }
 }
 

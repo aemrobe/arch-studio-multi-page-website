@@ -7,8 +7,11 @@
     display: block;
     position: absolute;
     color: $color-very-light-grey;
-    bottom: 105%;
+    top: rem(200);
     right: 0;
-    line-height: 1;
+  }
+
+  @include respond(desktop) {
+    top: rem(130);
   }
 }

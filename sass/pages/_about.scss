@@ -28,11 +28,16 @@
     @include respond(tab-port) {
       @include geometric-hero-shape("../../assets/about/tablet/image-hero.jpg");
     }
+
+    @include respond(tab-land) {
+      @include geometric-hero-shape(
+        "../../assets/about/desktop/image-hero.jpg",
+        10px
+      );
+    }
   }
 
   &__wrapper {
-    position: relative;
-
     @include respond(tab-port) {
       max-width: rem(456);
       &::before {
@@ -50,10 +55,22 @@
       max-width: unset;
       letter-spacing: rem(-2);
     }
+
+    @include respond(tab-land) {
+      margin-top: rem(57);
+    }
   }
 
   &__text {
     margin: rem(20) 0 0;
+
+    @include respond(tab-port) {
+      margin-top: rem(38);
+    }
+
+    @include respond(tab-land) {
+      margin-top: rem(49);
+    }
   }
 
   & ~ section h2 {

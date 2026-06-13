@@ -226,14 +226,49 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/tablet/image-hero-paramour.jpg");
   }
 }
+@media (min-width: 64em) {
+  .hero-slide--1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/desktop/image-hero-paramour.jpg");
+  }
+}
 .hero-slide--2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/mobile/image-hero-seraph.jpg");
+}
+@media (min-width: 48em) {
+  .hero-slide--2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/tablet/image-hero-seraph.jpg");
+  }
+}
+@media (min-width: 64em) {
+  .hero-slide--2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/desktop/image-hero-seraph.jpg");
+  }
 }
 .hero-slide--3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/mobile/image-hero-federal.jpg");
 }
+@media (min-width: 48em) {
+  .hero-slide--3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/tablet/image-hero-federal.jpg");
+  }
+}
+@media (min-width: 64em) {
+  .hero-slide--3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/desktop/image-hero-federal.jpg");
+  }
+}
 .hero-slide--4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/mobile/image-hero-trinity.jpg");
+}
+@media (min-width: 48em) {
+  .hero-slide--4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/tablet/image-hero-trinity.jpg");
+  }
+}
+@media (min-width: 64em) {
+  .hero-slide--4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/home/desktop/image-hero-trinity.jpg");
+  }
 }
 
 .link {
@@ -1073,7 +1108,7 @@ body {
 .about {
   padding: 11.3125rem 2rem 11.25rem;
   color: #fff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/home/tablet/image-small-team.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/home/mobile/image-small-team.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
@@ -1081,11 +1116,13 @@ body {
 @media (min-width: 48em) {
   .about {
     padding: 10.4375rem 4.375rem 10.5rem 3.625rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/home/tablet/image-small-team.jpg");
   }
 }
 @media (min-width: 64em) {
   .about {
     padding: 10.4375rem 4.375rem 10.5rem 11.875rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/home/desktop/image-small-team.jpg");
   }
 }
 .about__title {

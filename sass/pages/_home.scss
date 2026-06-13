@@ -129,19 +129,25 @@
 .about {
   padding: rem(181) rem(32) rem(180);
   color: $color-white;
-  background-image:
-    linear-gradient(rgba($color-dark, 0.6), rgba($color-dark, 0.6)),
-    url("../../assets/home/tablet/image-small-team.jpg");
+  @include about-section-background-image(
+    "../../assets/home/mobile/image-small-team.jpg"
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
 
   @include respond(tab-port) {
     padding: rem(167) rem(70) rem(168) rem(58);
+    @include about-section-background-image(
+      "../../assets/home/tablet/image-small-team.jpg"
+    );
   }
 
   @include respond(tab-land) {
     padding: rem(167) rem(70) rem(168) rem(190);
+    @include about-section-background-image(
+      "../../assets/home/desktop/image-small-team.jpg"
+    );
   }
 
   &__title {

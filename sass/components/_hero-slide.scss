@@ -45,32 +45,75 @@
 
   &--1 {
     display: block;
-    background-image:
-      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
-      url("../../assets/home/mobile/image-hero-paramour.jpg");
+
+    @include hero-slide-background-image(
+      "../../assets/home/mobile/image-hero-paramour.jpg"
+    );
 
     @include respond(tab-port) {
-      background-image:
-        linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
-        url("../../assets/home/tablet/image-hero-paramour.jpg");
+      @include hero-slide-background-image(
+        "../../assets/home/tablet/image-hero-paramour.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include hero-slide-background-image(
+        "../../assets/home/desktop/image-hero-paramour.jpg"
+      );
     }
   }
 
   &--2 {
-    background-image:
-      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
-      url("../../assets/home/mobile/image-hero-seraph.jpg");
+    @include hero-slide-background-image(
+      "../../assets/home/mobile/image-hero-seraph.jpg"
+    );
+
+    @include respond(tab-port) {
+      @include hero-slide-background-image(
+        "../../assets/home/tablet/image-hero-seraph.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include hero-slide-background-image(
+        "../../assets/home/desktop/image-hero-seraph.jpg"
+      );
+    }
   }
 
   &--3 {
-    background-image:
-      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
-      url("../../assets/home/mobile/image-hero-federal.jpg");
+    @include hero-slide-background-image(
+      "../../assets/home/mobile/image-hero-federal.jpg"
+    );
+
+    @include respond(tab-port) {
+      @include hero-slide-background-image(
+        "../../assets/home/tablet/image-hero-federal.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include hero-slide-background-image(
+        "../../assets/home/desktop/image-hero-federal.jpg"
+      );
+    }
   }
 
   &--4 {
-    background-image:
-      linear-gradient(rgba($color-dark, 0.4), rgba($color-dark, 0.4)),
-      url("../../assets/home/mobile/image-hero-trinity.jpg");
+    @include hero-slide-background-image(
+      "../../assets/home/mobile/image-hero-trinity.jpg"
+    );
+
+    @include respond(tab-port) {
+      @include hero-slide-background-image(
+        "../../assets/home/tablet/image-hero-trinity.jpg"
+      );
+    }
+
+    @include respond(tab-land) {
+      @include hero-slide-background-image(
+        "../../assets/home/desktop/image-hero-trinity.jpg"
+      );
+    }
   }
 }

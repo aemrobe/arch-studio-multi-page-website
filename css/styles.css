@@ -1354,10 +1354,23 @@ body {
 }
 @media (min-width: 48em) {
   .heritage {
-    padding-bottom: 14.4375rem;
+    padding-bottom: 12.9375rem;
   }
 }
-.heritage::before {
+@media (min-width: 64em) {
+  .heritage {
+    padding-bottom: 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .heritage__wrapper {
+    max-width: 26.625rem;
+  }
+}
+.heritage__wrapper::before {
   content: "";
   display: block;
   height: 1px;
@@ -1374,6 +1387,12 @@ body {
     margin-bottom: 3.875rem;
   }
 }
+@media (min-width: 64em) {
+  .heritage__title {
+    margin-top: 5.125rem;
+    margin-bottom: 3.1875rem;
+  }
+}
 @media (min-width: 48em) {
   .heritage__text {
     max-width: 41.8125rem;
@@ -1381,6 +1400,20 @@ body {
 }
 .heritage__text:not(:last-child) {
   margin-bottom: 1.5625rem;
+}
+.heritage__img {
+  display: none;
+}
+@media (min-width: 64em) {
+  .heritage__img {
+    width: 40%;
+    display: block;
+  }
+}
+@media (min-width: 80em) {
+  .heritage__img {
+    width: auto;
+  }
 }
 
 .leaders {
@@ -1391,19 +1424,32 @@ body {
     padding-bottom: 14.9375rem;
   }
 }
+@media (min-width: 64em) {
+  .leaders {
+    padding-bottom: 9.9375rem;
+    display: flex;
+  }
+}
+.leaders__list {
+  display: grid;
+  justify-content: center;
+}
 @media (min-width: 48em) {
   .leaders__list {
     max-width: 43.75rem;
     margin: 0 auto;
-    display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 6.4375rem 0.6875rem;
   }
 }
+@media (min-width: 64em) {
+  .leaders__list {
+    max-width: 45.625rem;
+    gap: 3.9375rem 1.875rem;
+  }
+}
 .leaders__list-item {
   max-width: 21.875rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 .leaders__list-item:not(:last-child) {
   margin-bottom: 4.9375rem;
@@ -1429,6 +1475,21 @@ body {
 @media (min-width: 48em) {
   .leaders__image-container {
     height: 16rem;
+  }
+}
+@media (min-width: 64em) {
+  .leaders__image-container {
+    height: 14.375rem;
+  }
+}
+@media (min-width: 80em) {
+  .leaders__image-container {
+    height: 16rem;
+  }
+}
+@media (min-width: 90em) {
+  .leaders__image-container {
+    height: 20rem;
   }
 }
 .leaders__img {

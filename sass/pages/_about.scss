@@ -82,11 +82,24 @@
   padding-bottom: rem(112);
 
   @include respond(tab-port) {
-    padding-bottom: rem(231);
+    padding-bottom: rem(207);
   }
 
-  &::before {
-    @include horizontal-line;
+  @include respond(tab-land) {
+    padding-bottom: rem(200);
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+  }
+
+  &__wrapper {
+    @include respond(tab-land) {
+      max-width: rem(426);
+    }
+
+    &::before {
+      @include horizontal-line;
+    }
   }
 
   &__title {
@@ -96,6 +109,11 @@
     @include respond(tab-port) {
       margin-top: rem(49);
       margin-bottom: rem(62);
+    }
+
+    @include respond(tab-land) {
+      margin-top: rem(82);
+      margin-bottom: rem(51);
     }
   }
 
@@ -108,6 +126,19 @@
   &__text:not(:last-child) {
     margin-bottom: $paragraph-spacing;
   }
+
+  &__img {
+    display: none;
+
+    @include respond(tab-land) {
+      width: 40%;
+      display: block;
+    }
+
+    @include respond(desktop) {
+      width: auto;
+    }
+  }
 }
 
 .leaders {
@@ -117,20 +148,31 @@
     padding-bottom: rem(239);
   }
 
+  @include respond(tab-land) {
+    padding-bottom: rem(159);
+    display: flex;
+  }
+
   &__list {
+    display: grid;
+    justify-content: center;
+
     @include respond(tab-port) {
       max-width: rem(700);
       margin: 0 auto;
-      display: grid;
+
       grid-template-columns: repeat(2, auto);
       gap: rem(103) rem(11);
+    }
+
+    @include respond(tab-land) {
+      max-width: rem(730);
+      gap: rem(63) rem(30);
     }
   }
 
   &__list-item {
     max-width: rem(350);
-    margin-left: auto;
-    margin-right: auto;
   }
 
   &__list-item:not(:last-child) {
@@ -156,6 +198,18 @@
 
     @include respond(tab-port) {
       height: rem(256);
+    }
+
+    @include respond(tab-land) {
+      height: rem(230);
+    }
+
+    @include respond(desktop) {
+      height: rem(256);
+    }
+
+    @include respond(big-screen) {
+      height: rem(320);
     }
   }
 

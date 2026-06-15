@@ -55,10 +55,30 @@
     }
   }
 
+  &--feature-white:hover span::before {
+    opacity: 1;
+  }
+
   &--feature-white {
     padding: 0;
     background-color: transparent;
     color: $color-very-dark-blue;
+    font-weight: bold;
+
+    span {
+      position: relative;
+
+      &::before {
+        content: "";
+        transition: opacity 0.3s;
+        height: 0.5px;
+        width: 100%;
+        background-color: $color-very-dark-blue;
+        position: absolute;
+        bottom: rem(6);
+        opacity: 0;
+      }
+    }
 
     &:hover {
       background-color: transparent;

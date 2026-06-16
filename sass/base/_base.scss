@@ -18,7 +18,7 @@ body {
   }
 }
 
-a:not(.link, .project-card__link-wrapper),
+a:not(.link, .project-card__link-wrapper, .leader__socia-media-link),
 button,
 [role="button"] {
   &:focus {

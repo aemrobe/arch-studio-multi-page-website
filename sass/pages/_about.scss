@@ -192,6 +192,7 @@
   }
 
   &__image-container {
+    position: relative;
     display: block;
     width: 100%;
     margin-bottom: rem(15);
@@ -220,6 +221,45 @@
     @include respond(tab-port) {
       height: 100%;
     }
+  }
+
+  &__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(32);
+    background-color: rgba($color-dark, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  &__image-container:hover &__image-overlay,
+  &__image-container:focus-within &__image-overlay {
+    opacity: 1;
+  }
+
+  &__socia-media-link {
+    text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: rem(3) solid $color-white;
+      outline-offset: rem(4);
+    }
+  }
+
+  &__social-media-icon {
+    display: block;
+    width: rem(40);
+    color: $color-white;
   }
 
   .leaders__text {

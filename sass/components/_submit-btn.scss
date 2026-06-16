@@ -10,7 +10,7 @@
   height: rem(80);
   width: rem(80);
   transition: all 0.3s;
-  outline: rem(3) solid transparent;
+  outline: rem(2) solid transparent;
   outline-offset: rem(3);
 
   &--right {
@@ -22,7 +22,7 @@
   }
 
   &:focus-visible {
-    outline: rem(3) solid $color-light-grey;
+    outline: rem(2) solid $color-very-dark-blue;
     outline-offset: rem(3);
   }
 

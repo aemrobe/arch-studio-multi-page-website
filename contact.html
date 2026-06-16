@@ -11,7 +11,11 @@
       href="./assets/favicon-32x32.png"
     />
 
+    <!--css file-->
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!--javascript file-->
+    <script defer src="script.js"></script>
 
     <title>Frontend Mentor | Arch Studio Website Challenge</title>
   </head>
@@ -190,42 +194,51 @@
         </h2>
 
         <form action="#" class="connect-with-us__form">
+          <div
+            role="status"
+            aria-live="polite"
+            class="sr-only connect-with-us__success-message"
+          ></div>
+
           <div class="connect-with-us__input-container">
             <input
               class="connect-with-us__input"
+              id="name-input"
               type="text"
               name="Name"
               aria-label="Name"
               placeholder="Name"
             />
 
-            <p class="error-text">Can't be empty</p>
+            <p id="name-input-error" class="error-text">Can't be empty</p>
           </div>
 
           <div class="connect-with-us__input-container">
             <input
               class="connect-with-us__input"
+              id="email-input"
               type="email"
               name="Email"
               aria-label="Email"
               placeholder="Email"
             />
 
-            <p class="error-text">Can't be empty</p>
+            <p id="email-input-error" class="error-text">Can't be empty</p>
           </div>
 
           <div class="connect-with-us__input-container">
             <textarea
+              id="message-input"
               class="connect-with-us__input connect-with-us__input--message"
               aria-label="Message"
               name="Message"
               placeholder="Message"
             ></textarea>
 
-            <p class="error-text">Can't be empty</p>
+            <p id="message-input-error" class="error-text">Can't be empty</p>
           </div>
 
-          <button type="button" class="submit-btn submit-btn--right">
+          <button type="submit" class="submit-btn submit-btn--right">
             <span class="sr-only">submit</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18">
               <g

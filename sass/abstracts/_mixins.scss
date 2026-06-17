@@ -35,13 +35,15 @@
   }
 }
 
-@mixin geometric-hero-shape($image-path, $bg-image-position: 0px) {
+@mixin geometric-hero-shape($image-path) {
   content: "";
   display: block;
   position: absolute;
   z-index: -1;
   top: 0;
-  inset-inline: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: rem(240);
   background-size: cover;
   background-repeat: no-repeat;
@@ -79,7 +81,6 @@
       0% 100%
     );
     background-size: contain;
-    background-position: top left $bg-image-position;
   }
 
   @include respond(big-screen) {

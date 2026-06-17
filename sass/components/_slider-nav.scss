@@ -10,11 +10,15 @@
     background-color: $color-white;
   }
 
-  &__link {
+  &__button {
     line-height: rem(25);
     font-weight: bold;
-    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
     color: $color-medium-grey;
+    border: none;
+    background-color: $color-white;
     display: flex;
     height: rem(80);
     width: rem(80);

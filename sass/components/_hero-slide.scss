@@ -6,7 +6,12 @@
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
+
   display: none;
+
+  &--active {
+    display: block;
+  }
 
   @include respond(tab-port) {
     padding: rem(186) rem(58) rem(179) rem(58);
@@ -16,12 +21,25 @@
     padding: rem(186) rem(58) rem(179) rem(190);
   }
 
+  @include respond(desktop) {
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   &__title {
     margin-bottom: rem(11);
 
     @include respond(tab-port) {
       max-width: rem(457);
       margin-bottom: rem(10);
+    }
+
+    @include respond(tab-land) {
+      max-width: rem(544);
     }
 
     @include respond(tab-land) {
@@ -44,7 +62,7 @@
   }
 
   &--1 {
-    display: block;
+    transform: translateX(0%);
 
     @include hero-slide-background-image(
       "../../assets/home/mobile/image-hero-paramour.jpg"
@@ -64,6 +82,8 @@
   }
 
   &--2 {
+    transform: translateX(100%);
+
     @include hero-slide-background-image(
       "../../assets/home/mobile/image-hero-seraph.jpg"
     );
@@ -82,6 +102,8 @@
   }
 
   &--3 {
+    transform: translateX(200%);
+
     @include hero-slide-background-image(
       "../../assets/home/mobile/image-hero-federal.jpg"
     );
@@ -100,6 +122,8 @@
   }
 
   &--4 {
+    transform: translateX(300%);
+
     @include hero-slide-background-image(
       "../../assets/home/mobile/image-hero-trinity.jpg"
     );
@@ -114,6 +138,12 @@
       @include hero-slide-background-image(
         "../../assets/home/desktop/image-hero-trinity.jpg"
       );
+    }
+
+    & .hero-slide__title {
+      @include respond(tab-port) {
+        max-width: rem(544);
+      }
     }
   }
 }

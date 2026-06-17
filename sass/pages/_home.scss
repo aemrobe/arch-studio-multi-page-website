@@ -19,12 +19,22 @@
 
   &__list {
     list-style-type: none;
+
+    &--no-transition .hero-slide {
+      transition: none !important;
+    }
+
+    @include respond(desktop) {
+      position: relative;
+      overflow: hidden;
+      height: rem(720);
+    }
   }
 
   &__nav {
     display: none;
 
-    @include respond(tab-land) {
+    @include respond(desktop) {
       display: flex;
       position: absolute;
       bottom: 0;

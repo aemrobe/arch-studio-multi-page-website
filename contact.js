@@ -7,6 +7,9 @@ const nameInput = document.getElementById("name-input");
 const emailInput = document.getElementById("email-input");
 const messageInput = document.getElementById("message-input");
 
+// Constants
+const FORM_SUCCESS_REDIRECT_MS = 200;
+
 // Validator functions
 const validateRequired = function (value) {
   return value === "" ? "Can't be empty" : null;
@@ -78,7 +81,6 @@ form.addEventListener("submit", (e) => {
       showErrorMessage(field.element, formError);
 
       if (!firstErrorField) {
-        successMessage.textContent = "";
         firstErrorField = field.element;
       }
     } else {
@@ -93,7 +95,7 @@ form.addEventListener("submit", (e) => {
 
     setTimeout(() => {
       successMessage.textContent = "";
-    }, 500);
+    }, FORM_SUCCESS_REDIRECT_MS);
     nameInput.value = "";
     emailInput.value = "";
     messageInput.value = "";

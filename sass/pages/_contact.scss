@@ -21,6 +21,11 @@
     justify-content: flex-end;
   }
 
+  @include respond(desktop) {
+    height: rem(720);
+    padding-left: 0;
+  }
+
   &__wrapper {
     @include respond(tab-port) {
       max-width: rem(456);
@@ -66,8 +71,7 @@
 
     @include respond(tab-land) {
       @include geometric-hero-shape(
-        "../../assets/contact/desktop/image-hero.jpg",
-        21px
+        "../../assets/contact/desktop/image-hero.jpg"
       );
     }
   }

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <!--javascript file-->
-    <script defer src="script.js"></script>
+    <script defer src="home.js"></script>
 
     <title>Frontend Mentor | Arch Studio Website Challenge</title>
   </head>
@@ -79,8 +79,11 @@
       </div>
 
       <section class="hero" aria-label="Featured Projects Slider">
-        <ul class="hero__list">
-          <li class="hero-slide hero-slide--1">
+        <ul class="hero__list hero__list--no-transition">
+          <li
+            class="hero-slide hero-slide--1 hero-slide--active"
+            data-slide="0"
+          >
             <h2 class="hero-slide__title heading-l">Project Paramour</h2>
 
             <p class="hero-slide__text">
@@ -108,8 +111,8 @@
             ></a>
           </li>
 
-          <li class="hero-slide hero-slide--2">
-            <h2 class="hero-slide__title">Seraph Station</h2>
+          <li class="hero-slide hero-slide--2" data-slide="1">
+            <h2 class="hero-slide__title heading-l">Seraph Station</h2>
 
             <p class="hero-slide__text">
               The Seraph Station project challenged us to design a unique
@@ -136,8 +139,8 @@
             ></a>
           </li>
 
-          <li class="hero-slide hero-slide--3">
-            <h2 class="hero-slide__title">Federal II Tower</h2>
+          <li class="hero-slide hero-slide--3" data-slide="2">
+            <h2 class="hero-slide__title heading-l">Federal II Tower</h2>
 
             <p class="hero-slide__text">
               A sequel theme project for a tower originally built in the 1800s.
@@ -164,8 +167,8 @@
             ></a>
           </li>
 
-          <li class="hero-slide hero-slide--4">
-            <h2 class="hero-slide__title">Trinity Bank Tower</h2>
+          <li class="hero-slide hero-slide--4" data-slide="3">
+            <h2 class="hero-slide__title heading-l">Trinity Bank Tower</h2>
 
             <p class="hero-slide__text">
               Trinity Bank challenged us to make a concept for a 84 story
@@ -193,23 +196,27 @@
             ></a>
           </li>
         </ul>
-        <!--  02 03 04 -->
 
         <ul class="slider-nav hero__nav">
           <li class="slider-nav__item">
-            <a href="#" class="slider-nav__link slider-nav__link--active">01</a>
+            <button
+              class="slider-nav__button slider-nav__button--active"
+              data-slide="0"
+            >
+              01
+            </button>
           </li>
 
           <li class="slider-nav__item">
-            <a href="#" class="slider-nav__link">02</a>
+            <button class="slider-nav__button" data-slide="1">02</button>
           </li>
 
           <li class="slider-nav__item">
-            <a href="#" class="slider-nav__link">03</a>
+            <button class="slider-nav__button" data-slide="2">03</button>
           </li>
 
           <li class="slider-nav__item">
-            <a href="#" class="slider-nav__link">04</a>
+            <button class="slider-nav__button" data-slide="3">04</button>
           </li>
         </ul>
       </section>

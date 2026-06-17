@@ -22,6 +22,10 @@
     justify-content: flex-end;
   }
 
+  @include respond(desktop) {
+    height: rem(720);
+  }
+
   &::after {
     @include geometric-hero-shape("../assets/about/mobile/image-hero.jpg");
 
@@ -31,8 +35,7 @@
 
     @include respond(tab-land) {
       @include geometric-hero-shape(
-        "../../assets/about/desktop/image-hero.jpg",
-        10px
+        "../../assets/about/desktop/image-hero.jpg"
       );
     }
   }

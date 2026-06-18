@@ -19,7 +19,7 @@ body {
 }
 
 a:not(.link, .project-card__link-wrapper, .leader__socia-media-link),
-button,
+button:not(.header__menu-toggle),
 [role="button"] {
   &:focus {
     outline: none;

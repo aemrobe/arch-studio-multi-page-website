@@ -1,8 +1,8 @@
 @use "../abstracts" as *;
 
 .header {
+  z-index: 180;
   position: fixed;
-  z-index: 150;
   pointer-events: none;
   min-height: 100vh;
   top: 0;
@@ -24,6 +24,7 @@
   }
 
   &__wrapper {
+    z-index: 160;
     pointer-events: all;
     background-color: $color-white;
     padding: rem(32);
@@ -32,6 +33,7 @@
     align-items: center;
 
     @include respond(tab-port) {
+      z-index: unset;
       padding: rem(56) 0 rem(56) rem(97);
       background-color: transparent;
       justify-content: flex-start;
@@ -48,6 +50,15 @@
 
     @include respond(tab-port) {
       display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: rem(2) solid $color-very-dark-blue;
+      outline-offset: rem(3);
     }
   }
 

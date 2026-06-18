@@ -12,23 +12,35 @@ const addEvent = function (eventName, callback) {
   window.addEventListener(eventName, callback);
 };
 
-const activateSliderNumber = function (curSlide) {
+const activateSliderNumber = function (activeIndex) {
   const heroSlides = document.querySelectorAll(".hero-slide");
   const slideButtons = document.querySelectorAll(".slider-nav__button");
 
-  heroSlides.forEach((slide) => {
-    slide.classList.remove("hero-slide--active");
+  heroSlides.forEach((slide, index) => {
+    const link = slide.querySelector(".hero-slide__link");
 
-    if (Number(slide.dataset.slide) === curSlide) {
+    if (index === activeIndex) {
+      slide.removeAttribute("aria-hidden");
       slide.classList.add("hero-slide--active");
+
+      if (link) link.setAttribute("tabIndex", 0);
+    } else {
+      slide.classList.remove("hero-slide--active");
+      slide.setAttribute("aria-hidden", "true");
+
+      if (link) link.setAttribute("tabindex", -1);
     }
   });
 
-  slideButtons.forEach((button) => {
+  slideButtons.forEach((button, index) => {
     button.classList.remove("slider-nav__button--active");
 
-    if (Number(button.dataset.slide) === curSlide) {
+    if (index === activeIndex) {
       button.classList.add("slider-nav__button--active");
+      button.setAttribute("aria-current", "true");
+    } else {
+      button.classList.remove("slider-nav__button--active");
+      button.setAttribute("aria-current", "false");
     }
   });
 };
@@ -50,6 +62,8 @@ sliderNavContainer.addEventListener("click", (e) => {
   gotoSlide(curSlide);
   activateSliderNumber(curSlide);
 });
+
+activateSliderNumber(curSlide);
 
 setTimeout(() => {
   const sliderContainer = document.querySelector(".hero__list");

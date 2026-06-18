@@ -37,12 +37,12 @@ body {
 }
 
 a:not(.link, .project-card__link-wrapper, .leader__socia-media-link):focus,
-button:not(.header__menu-toggle):focus,
+button:not(.header__menu-toggle, .submit-btn):focus,
 [role=button]:focus {
   outline: none;
 }
 a:not(.link, .project-card__link-wrapper, .leader__socia-media-link):focus-visible,
-button:not(.header__menu-toggle):focus-visible,
+button:not(.header__menu-toggle, .submit-btn):focus-visible,
 [role=button]:focus-visible {
   outline: 0.1875rem solid #1b1d23;
   outline-offset: 0.1875rem;
@@ -751,7 +751,7 @@ body {
   height: 5rem;
   width: 5rem;
   padding: 1.75rem 2rem 1.6875rem 1.9375rem;
-  transition: all 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 .slider-nav__button:not(.slider-nav__button--active):hover {
   background-color: #eeeff4;
@@ -1836,8 +1836,20 @@ body {
 .contact-details {
   padding-bottom: 4.5625rem;
 }
+.contact-details--map-failed {
+  padding-bottom: 8.75rem;
+}
+.contact-details--map-failed .contact-details__map {
+  display: none !important;
+}
+.contact-details--map-failed .contact-details__list {
+  margin-bottom: 0rem;
+}
 @media (min-width: 48em) {
   .contact-details {
+    padding-bottom: 12.4375rem;
+  }
+  .contact-details--map-failed {
     padding-bottom: 12.4375rem;
   }
 }
@@ -1846,6 +1858,9 @@ body {
     padding-bottom: 9.9375rem;
     display: flex;
     flex-wrap: wrap;
+  }
+  .contact-details--map-failed {
+    padding-bottom: 12.4375rem;
   }
 }
 .contact-details__wrapper::before {
@@ -1857,6 +1872,7 @@ body {
 }
 .contact-details__title {
   margin-bottom: 2.5rem;
+  margin-top: 4.3125rem;
   max-width: 7ch;
 }
 @media (min-width: 48em) {
@@ -1945,19 +1961,29 @@ body {
     margin-top: 3.6875rem;
   }
 }
-.contact-details__img {
+.contact-details__map {
+  z-index: 1;
   width: 100%;
   display: block;
   margin: 0 auto;
   max-width: 23.4375rem;
+  height: 22.9375rem;
+}
+.contact-details__map:focus {
+  outline: none;
+}
+.contact-details__map:focus-visible {
+  outline: 0.125rem solid #1b1d23;
+  outline-offset: 0.5rem;
 }
 @media (min-width: 48em) {
-  .contact-details__img {
+  .contact-details__map {
     max-width: 35.8125rem;
+    height: 35rem;
   }
 }
 @media (min-width: 64em) {
-  .contact-details__img {
+  .contact-details__map {
     max-width: unset;
   }
 }

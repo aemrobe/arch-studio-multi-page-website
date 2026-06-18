@@ -80,14 +80,34 @@
 .contact-details {
   padding-bottom: rem(73);
 
+  &--map-failed {
+    padding-bottom: rem(140);
+
+    .contact-details__map {
+      display: none !important;
+    }
+
+    .contact-details__list {
+      margin-bottom: rem(0);
+    }
+  }
+
   @include respond(tab-port) {
     padding-bottom: rem(199);
+
+    &--map-failed {
+      padding-bottom: rem(199);
+    }
   }
 
   @include respond(tab-land) {
     padding-bottom: rem(159);
     display: flex;
     flex-wrap: wrap;
+
+    &--map-failed {
+      padding-bottom: rem(199);
+    }
   }
 
   &__wrapper {
@@ -98,6 +118,7 @@
 
   &__title {
     margin-bottom: rem(40);
+    margin-top: rem(69);
     max-width: 7ch;
 
     @include respond(tab-port) {
@@ -145,8 +166,6 @@
   }
 
   &__list-item {
-    // border: 2px solid lime;
-
     @include respond(tab-port) {
       display: flex;
       justify-content: space-between;
@@ -189,14 +208,26 @@
     }
   }
 
-  &__img {
+  &__map {
+    z-index: 1;
     width: 100%;
     display: block;
     margin: 0 auto;
     max-width: rem(375);
+    height: rem(367);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: rem(2) solid $color-very-dark-blue;
+      outline-offset: rem(8);
+    }
 
     @include respond(tab-port) {
       max-width: rem(573);
+      height: rem(560);
     }
 
     @include respond(tab-land) {

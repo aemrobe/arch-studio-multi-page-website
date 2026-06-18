@@ -23,7 +23,9 @@
     height: rem(80);
     width: rem(80);
     padding: rem(28) rem(32) rem(27) rem(31);
-    transition: all 0.3s;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
 
     &:not(&--active):hover {
       background-color: $color-very-light-grey;

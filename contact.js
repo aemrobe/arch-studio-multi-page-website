@@ -7,6 +7,10 @@ const nameInput = document.getElementById("name-input");
 const emailInput = document.getElementById("email-input");
 const messageInput = document.getElementById("message-input");
 
+// Map Elements
+const mapContainer = document.getElementById("map");
+const contactDetailsSection = document.querySelector(".contact-details");
+
 // Constants
 const FORM_SUCCESS_REDIRECT_MS = 200;
 
@@ -101,3 +105,49 @@ form.addEventListener("submit", (e) => {
     messageInput.value = "";
   }
 });
+
+// Map
+
+try {
+  if (typeof L === undefined) {
+    throw new Error("Leaflet script failed to load");
+  }
+
+  const addisAbabaCityCoords = [9.0192, 38.7469];
+  const map = L.map("map").setView(addisAbabaCityCoords, 13);
+
+  L.tileLayer(
+    "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    },
+  ).addTo(map);
+
+  const officeOneCoords = [9.008, 38.7469];
+  const markerOne = L.marker(officeOneCoords).addTo(map);
+  markerOne
+    .bindPopup(
+      "<b>Arch Studio Main Office</b> <br> Visit our primary design hub here.",
+    )
+    .openPopup();
+
+  const officeTwoCoords = [8.991, 38.759];
+  const markerTwo = L.marker(officeTwoCoords).addTo(map);
+  markerTwo.bindPopup(
+    "<b>Arch Studio Office II</b> <br> Discover our specialized workshop branch.",
+  );
+
+  mapContainer.setAttribute("role", "application");
+  mapContainer.setAttribute(
+    "aria-label",
+    "Interactive map displaying Arch Studio branch locations in Addis Ababa, Ethiopia.",
+  );
+} catch (error) {
+  console.log("Map Initalization failed:", error.message);
+
+  if (contactDetailsSection) {
+    contactDetailsSection.classList.add("contact-details--map-failed");
+  }
+}

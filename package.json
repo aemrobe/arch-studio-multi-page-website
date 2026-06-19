@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass sass/main.scss css/styles.css --watch",
-    "compile:sass": "sass sass/main.scss css/styles.comp.css",
-    "prefix-one-go:css": "postcss --use autoprefixer cssnano -b 'last 10 versions' css/styles.comp.css -o css/styles.css",
+    "watch:sass": "npx sass sass/main.scss css/styles.css --watch",
+    "compile:sass": "npx sass sass/main.scss css/styles.comp.css",
+    "prefix-one-go:css": "npx postcss --use autoprefixer cssnano -b 'last 10 versions' css/styles.comp.css -o css/styles.css",
     "build:css": "npm run compile:sass && npm run prefix-one-go:css"
   },
   "author": "",

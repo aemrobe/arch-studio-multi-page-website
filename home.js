@@ -52,7 +52,6 @@ const gotoSlide = function (curSlide) {
 };
 
 sliderNavContainer.addEventListener("click", (e) => {
-  console.log("target", e.target);
   const sliderNumber = e.target.closest(".slider-nav__button");
 
   if (!sliderNumber) return;

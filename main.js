@@ -6,7 +6,6 @@ const NAVIGATION_MENU_TRANSITION_MS = 400;
 
 // Toggling the mobile menu navigation
 hamburgerMenu.addEventListener("click", function () {
-  console.log("clicked");
   if (!navigationMenuList.classList.contains("open")) {
     hamburgerMenu.setAttribute("aria-expanded", true);
     navigationMenuList.classList.remove("not-open");

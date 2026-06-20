@@ -4,17 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "npx sass sass/main.scss css/styles.css --watch",
-    "compile:sass": "npx sass sass/main.scss css/styles.comp.css",
-    "prefix-one-go:css": "npx postcss --use autoprefixer cssnano -b 'last 10 versions' css/styles.comp.css -o css/styles.css",
-    "build:css": "npm run compile:sass && npm run prefix-one-go:css"
+    "watch:sass": "sass sass/main.scss css/styles.css --watch",
+    "compile:sass": "sass sass/main.scss css/styles.comp.css",
+    "prefix-one-go:css": "postcss --use autoprefixer cssnano -b 'last 10 versions' css/styles.comp.css -o css/styles.css",
+    "build": "npm run compile:sass && npm run prefix-one-go:css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.5.0",
     "cssnano": "^8.0.2",
-    "npm-run-all": "^4.1.5",
     "postcss-cli": "^11.0.1",
     "sass": "^1.100.0"
   }

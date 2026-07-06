@@ -11,9 +11,6 @@ const messageInput = document.getElementById("message-input");
 const mapContainer = document.getElementById("map");
 const contactDetailsSection = document.querySelector(".contact-details");
 
-// Constants
-const FORM_SUCCESS_REDIRECT_MS = 200;
-
 // Validator functions
 const validateRequired = function (value) {
   return value === "" ? "Can't be empty" : null;
@@ -24,7 +21,7 @@ const validateEmail = function (value) {
     value,
   )
     ? null
-    : "Invalid email address";
+    : "Please use a valid email address";
 };
 
 function validateFields(validators, value) {
@@ -59,6 +56,11 @@ const hideErrorMessage = function (field) {
   showErrorTextElement.textContent = "";
 };
 
+// Clear the success status when the user starts typing again
+const clearStatusOnInteraction = () => {
+  if (successMessage.textContent) successMessage.textContent = "";
+};
+
 const fields = [
   {
     element: nameInput,
@@ -71,6 +73,10 @@ const fields = [
   { element: messageInput, validators: [validateRequired] },
 ];
 
+[nameInput, emailInput, messageInput].forEach((el) =>
+  el.addEventListener("input", clearStatusOnInteraction),
+);
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -78,8 +84,6 @@ form.addEventListener("submit", (e) => {
 
   for (const field of fields) {
     const formError = validateFields(field.validators, field.element.value);
-
-    console.log(formError);
 
     if (formError) {
       showErrorMessage(field.element, formError);
@@ -95,11 +99,8 @@ form.addEventListener("submit", (e) => {
   if (firstErrorField) {
     firstErrorField.focus();
   } else {
-    successMessage.textContent = "Your form Succesfully submitted!";
+    successMessage.textContent = "Your form successfully submitted!";
 
-    setTimeout(() => {
-      successMessage.textContent = "";
-    }, FORM_SUCCESS_REDIRECT_MS);
     nameInput.value = "";
     emailInput.value = "";
     messageInput.value = "";
@@ -107,9 +108,8 @@ form.addEventListener("submit", (e) => {
 });
 
 // Map
-
 try {
-  if (typeof L === undefined) {
+  if (typeof L === "undefined") {
     throw new Error("Leaflet script failed to load");
   }
 
@@ -145,7 +145,7 @@ try {
     "Interactive map displaying Arch Studio branch locations in Addis Ababa, Ethiopia.",
   );
 } catch (error) {
-  console.log("Map Initalization failed:", error.message);
+  console.error("Map Initalization failed:", error.message);
 
   if (contactDetailsSection) {
     contactDetailsSection.classList.add("contact-details--map-failed");

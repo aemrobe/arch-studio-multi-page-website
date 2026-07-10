@@ -136,7 +136,7 @@
 
             <a
               href="#map"
-              aria-label="Skip to interactive map section for our Addis Ababa main Office"
+              aria-label="Skip to interactive map section for our Tennessee main office"
               class="contact-details__list-link link link--feature-white"
               ><span> View on Map</span>
 
@@ -170,7 +170,7 @@
 
             <a
               href="#map"
-              aria-label="Skip to interactive map section for our Addis Ababa second Office"
+              aria-label="Skip to interactive map section for our Texas second office"
               class="contact-details__list-link link link--feature-white"
               ><span>View on Map</span>
 
@@ -192,7 +192,7 @@
           </li>
         </ul>
 
-        <div id="map" class="contact-details__map"></div>
+        <div id="map" class="contact-details__map" tabindex="-1"></div>
       </section>
 
       <section
@@ -214,45 +214,51 @@
           ></div>
 
           <div class="connect-with-us__input-container">
+            <label for="name-input" class="sr-only">Name</label>
+
             <input
               class="connect-with-us__input"
               id="name-input"
               type="text"
               name="Name"
-              aria-label="Name"
               placeholder="Name"
+              aria-invalid="false"
             />
 
-            <p id="name-input-error" class="error-text">Can't be empty</p>
+            <p id="name-input-error" class="error-text"></p>
           </div>
 
           <div class="connect-with-us__input-container">
+            <label for="email-input" class="sr-only">Email Address</label>
+
             <input
               class="connect-with-us__input"
               id="email-input"
               type="email"
               name="Email"
-              aria-label="Email"
               placeholder="Email"
+              aria-invalid="false"
             />
 
-            <p id="email-input-error" class="error-text">Can't be empty</p>
+            <p id="email-input-error" class="error-text"></p>
           </div>
 
           <div class="connect-with-us__input-container">
+            <label for="message-input" class="sr-only">Message</label>
+
             <textarea
               id="message-input"
               class="connect-with-us__input connect-with-us__input--message"
-              aria-label="Message"
               name="Message"
               placeholder="Message"
+              aria-invalid="false"
             ></textarea>
 
-            <p id="message-input-error" class="error-text">Can't be empty</p>
+            <p id="message-input-error" class="error-text"></p>
           </div>
 
           <button type="submit" class="submit-btn submit-btn--right">
-            <span class="sr-only">submit</span>
+            <span class="sr-only">Submit Form</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18">
               <g
                 fill="none"
